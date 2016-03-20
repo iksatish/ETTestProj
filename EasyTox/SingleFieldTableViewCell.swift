@@ -8,11 +8,21 @@
 
 import UIKit
 
+@objc
+protocol SingleFieldCellDelegate{
+    optional func openNewPatientView()
+}
 class SingleFieldTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var inputField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
+    var delegate:SingleFieldCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.addButton.hidden = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -21,4 +31,7 @@ class SingleFieldTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func onTappingAdd(sender: UIButton) {
+        self.delegate?.openNewPatientView!()
+    }
 }

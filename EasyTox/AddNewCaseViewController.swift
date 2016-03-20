@@ -8,15 +8,18 @@
 
 import UIKit
 
-class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DetailsCellDelegate {
+class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DetailsCellDelegate, PickerFieldViewDelegate, PickerViewCallBackDelegate,SingleFieldCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var collapsedRows:[Int] = []
+    var caseForm:CaseForm = CaseForm()
+    var insuranceType:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.registerNib(UINib(nibName: "PatientDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "patientDetailsCellIdentifier")
-        self.tableView.registerNib(UINib(nibName: "PhysicistTableViewCell", bundle: nil), forCellReuseIdentifier: "physicistCellIdentifier")
-        self.tableView.registerNib(UINib(nibName: "PatientInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "headerCellIdentifier")
+        self.tableView.registerNib(UINib(nibName: "SingleFieldTableViewCell", bundle: nil), forCellReuseIdentifier: singleCellIdentifier)
+        self.tableView.registerNib(UINib(nibName: "DoubleFieldTableViewCell", bundle: nil), forCellReuseIdentifier: doubleCellIdentifier)
+        self.tableView.registerNib(UINib(nibName: "PatientInfoTableViewCell", bundle: nil), forCellReuseIdentifier: patientInfoCellIdentifier)
+        self.tableView.registerNib(UINib(nibName: "HeaderCellTableViewCell", bundle: nil), forCellReuseIdentifier: headerCellIdentifier)
         // Do any additional setup after loading the view.
     }
 
@@ -33,53 +36,85 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.section == 0{
-            let cell:PatientInfoTableViewCell = tableView.dequeueReusableCellWithIdentifier("headerCellIdentifier")! as! PatientInfoTableViewCell
-            return cell
-        }else if indexPath.section == 1{
-            let cell:PatientDetailsTableViewCell = tableView.dequeueReusableCellWithIdentifier("patientDetailsCellIdentifier")! as! PatientDetailsTableViewCell
-            cell.delegate = self
-            cell.rowNum = indexPath.section
-            cell.detailsView.hidden = cell.isCollapsed
-            return cell
-        }else if indexPath.section == 2{
-            let cell:PhysicistTableViewCell = tableView.dequeueReusableCellWithIdentifier("physicistCellIdentifier")! as! PhysicistTableViewCell
-            cell.delegate = self
-            cell.rowNum = indexPath.section
-            cell.detalisView.hidden = cell.isCollapsed
-            return cell
-        }else{
-            let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("submitCellIdentifier")! as UITableViewCell
-             return cell
-
+        switch section{
+        case 1:
+            return 6
+        case 2:
+            if self.insuranceType == "Worksmen"{
+                return 7
+            }
+            else{
+                return 6
+            }
+        default:
+            return 1
         }
     }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        switch indexPath.section{
+        case 0:
+            let cell:PatientInfoTableViewCell = tableView.dequeueReusableCellWithIdentifier(patientInfoCellIdentifier)! as! PatientInfoTableViewCell
+            return cell
+        case 1:
+            if indexPath.row == 0{
+                let cell:HeaderCellTableViewCell = tableView.dequeueReusableCellWithIdentifier(headerCellIdentifier)! as! HeaderCellTableViewCell
+                
+                return cell
+            }else if indexPath.row == 1{
+                let cell:SingleFieldTableViewCell = tableView.dequeueReusableCellWithIdentifier(singleCellIdentifier)! as! SingleFieldTableViewCell
+                cell.addButton.hidden = false
+                cell.headerLabel.text = "Patient"
+                cell.inputField.text = "Select Patient"
+                cell.inputField.setUpField(FieldType.DROPDOWN)
+                cell.delegate = self
+                return cell
+            }else{
+                let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCellWithIdentifier(doubleCellIdentifier)! as! DoubleFieldTableViewCell
+                cell.setUpCell(indexPath, cellFor: patientFormIdentifier)
+                cell.delegate = self
+                return cell
+            }
+        case 2:
+            if indexPath.row == 0{
+                let cell:HeaderCellTableViewCell = tableView.dequeueReusableCellWithIdentifier(headerCellIdentifier)! as! HeaderCellTableViewCell
+                return cell
+            }else{
+                let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCellWithIdentifier(doubleCellIdentifier)! as! DoubleFieldTableViewCell
+                cell.setUpCell(indexPath, cellFor: physicianFormIdentifier)
+                cell.delegate = self
+                return cell
+            }
+        default:
+            let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("submitCellIdentifier")! as UITableViewCell
+            return cell
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.clearColor()
+        return view
+    }
+
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section{
         case 0:
             return 150
-        case 1:
-            if let _ = self.collapsedRows.indexOf(indexPath.section){
-                return 50
-            }else{
-                return 500
-            }
-        case 2:
-            if let _ = self.collapsedRows.indexOf(indexPath.section){
-                return 50
-            }else{
-                return 640
-            }
-        default:
+        case 3:
             return 44
+        default:
+            if indexPath.row == 0{
+                return 45
+            }else{
+                return 85
+            }
         }
     }
-    
     
     //MARK: Cell Delegate
     func collapseThisCell(rowNum: Int, isCollapsing:Bool) {
@@ -93,9 +128,28 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
         self.tableView.reloadData()
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("homeviewcontrollerIdentifier")
-//        self.presentViewController(vc, animated: true, completion: nil)
 
     }
     
+    func openPickerViewForField(textField: UITextField, forPickerType: PickerViewType) {
+        let vc:PickerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("pickerViewControllerIdentifier") as! PickerViewController
+        vc.pickerViewType = forPickerType
+        vc.currentField = textField
+        vc.delegate = self
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+    }
+    
+    func updateFormWithPickerSelection(value: String, forType: PickerViewType) {
+        if forType == .InsuranceType{
+            self.insuranceType = value
+            self.tableView.reloadData()
+        }
+    }
+    
+    func openNewPatientView() {
+        let vc:NewPatientViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("newPatientViewControllerIdentifier") as! NewPatientViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+
 }

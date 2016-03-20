@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="insButtonsCellIdentifier" id="KGk-i7-Jjw" customClass="ButtonsTableViewCell" customModule="EasyTox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxg-16-bb7">
+                        <rect key="frame" x="18" y="7" width="192" height="30"/>
+                        <color key="backgroundColor" red="0.25882352941176467" green="0.49803921568627452" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="6rK-jR-C1n"/>
+                            <constraint firstAttribute="width" constant="150" id="W1P-sh-pue"/>
+                        </constraints>
+                        <state key="normal" title="Add Worksmen">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W1P-sh-pue"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="onTappingButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j4Y-FG-KGT"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8b-xe-nOa">
+                        <rect key="frame" x="288" y="7" width="192" height="30"/>
+                        <color key="backgroundColor" red="0.25882352939999997" green="0.49803921569999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="Q1r-zi-Osn"/>
+                            <constraint firstAttribute="height" constant="30" id="lry-Fw-xbL"/>
+                        </constraints>
+                        <state key="normal" title="Add Primary">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Q1r-zi-Osn"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="onTappingButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BaG-cU-GBR"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Q8b-xe-nOa" firstAttribute="height" secondItem="bxg-16-bb7" secondAttribute="height" id="DNK-kt-zWa"/>
+                    <constraint firstItem="Q8b-xe-nOa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="NLn-1q-uOn"/>
+                    <constraint firstItem="Q8b-xe-nOa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="280" id="TBu-oi-vxQ"/>
+                    <constraint firstItem="Q8b-xe-nOa" firstAttribute="top" secondItem="bxg-16-bb7" secondAttribute="top" id="Udc-PH-1xy"/>
+                    <constraint firstItem="bxg-16-bb7" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:4" id="VC0-q0-zHv"/>
+                    <constraint firstItem="bxg-16-bb7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="c16-dK-o9t"/>
+                    <constraint firstItem="bxg-16-bb7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eqs-FR-UJS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstButton" destination="bxg-16-bb7" id="XNh-Mz-jQV"/>
+                <outlet property="secondButton" destination="Q8b-xe-nOa" id="frb-8r-RGS"/>
+            </connections>
+            <point key="canvasLocation" x="462" y="335"/>
+        </tableViewCell>
+    </objects>
+</document>

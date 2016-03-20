@@ -22,13 +22,24 @@
 		2248C9D51C78B17D008067D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248C9D31C78B17D008067D0 /* LaunchScreen.storyboard */; };
 		2248C9E01C78B17D008067D0 /* EasyToxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9DF1C78B17D008067D0 /* EasyToxTests.swift */; };
 		22654D451C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D441C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib */; };
-		22654D471C8EBB2200E6EBE8 /* LegacyInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D461C8EBB2200E6EBE8 /* LegacyInputView.xib */; };
-		22654D491C8EBECC00E6EBE8 /* LegacyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D481C8EBECC00E6EBE8 /* LegacyInputView.swift */; };
 		22654D4B1C97B98100E6EBE8 /* AddNewCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */; };
 		22654D4E1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D4C1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift */; };
 		22654D4F1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */; };
 		22654D521C97E35F00E6EBE8 /* PhysicistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */; };
 		22654D531C97E35F00E6EBE8 /* PhysicistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */; };
+		228612C71C9EDECA002A1442 /* ButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612C51C9EDECA002A1442 /* ButtonsTableViewCell.swift */; };
+		228612C81C9EDECA002A1442 /* ButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228612C61C9EDECA002A1442 /* ButtonsTableViewCell.xib */; };
+		228612CB1C9EE218002A1442 /* InsuranceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612C91C9EE218002A1442 /* InsuranceTableViewCell.swift */; };
+		228612CC1C9EE218002A1442 /* InsuranceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228612CA1C9EE218002A1442 /* InsuranceTableViewCell.xib */; };
+		228612CE1C9F0403002A1442 /* PatientForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612CD1C9F0403002A1442 /* PatientForm.swift */; };
+		228612D01C9F05ED002A1442 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612CF1C9F05ED002A1442 /* CoreDataHandler.swift */; };
+		228612E61C9F08C1002A1442 /* PatientDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612E41C9F08C1002A1442 /* PatientDetails+CoreDataProperties.swift */; };
+		228612E71C9F08C1002A1442 /* PatientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612E51C9F08C1002A1442 /* PatientDetails.swift */; };
+		228612E81C9F0E92002A1442 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612CF1C9F05ED002A1442 /* CoreDataHandler.swift */; };
+		228612E91C9F0FD2002A1442 /* PatientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612E51C9F08C1002A1442 /* PatientDetails.swift */; };
+		228612EC1C9F1169002A1442 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612EA1C9F1169002A1442 /* ListTableViewCell.swift */; };
+		228612ED1C9F1169002A1442 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228612EB1C9F1169002A1442 /* ListTableViewCell.xib */; };
+		228612EF1C9F1A6C002A1442 /* CaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612EE1C9F1A6C002A1442 /* CaseListViewController.swift */; };
 		228C59111C8B55F80064C374 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59101C8B55F80064C374 /* GlobalConstants.swift */; };
 		228C59121C8B55F80064C374 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59101C8B55F80064C374 /* GlobalConstants.swift */; };
 		228C59131C8B56000064C374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9C71C78B17D008067D0 /* AppDelegate.swift */; };
@@ -51,6 +62,17 @@
 		228C59461C8EA6860064C374 /* PatientDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C59451C8EA6860064C374 /* PatientDetailsView.xib */; };
 		22E10EFC1C8EABEE00CB0356 /* CustomTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */; };
 		22E10EFE1C8EADF100CB0356 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */; };
+		22FC42721C9E6AB200745EFD /* HeaderCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC42701C9E6AB200745EFD /* HeaderCellTableViewCell.swift */; };
+		22FC42731C9E6AB200745EFD /* HeaderCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC42711C9E6AB200745EFD /* HeaderCellTableViewCell.xib */; };
+		22FC42781C9E8CF600745EFD /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC42771C9E8CF600745EFD /* UITextFieldExtensions.swift */; };
+		22FC427B1C9E9CE400745EFD /* CaseForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC427A1C9E9CE400745EFD /* CaseForm.swift */; };
+		22FC42851C9EC55400745EFD /* TripleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC42831C9EC55400745EFD /* TripleCellTableViewCell.swift */; };
+		22FC42861C9EC55400745EFD /* TripleCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC42841C9EC55400745EFD /* TripleCellTableViewCell.xib */; };
+		22FC42891C9EC5EB00745EFD /* DobAgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC42871C9EC5EB00745EFD /* DobAgeTableViewCell.swift */; };
+		22FC428A1C9EC5EB00745EFD /* DobAgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC42881C9EC5EB00745EFD /* DobAgeTableViewCell.xib */; };
+		22FC428C1C9EC6ED00745EFD /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC428B1C9EC6ED00745EFD /* NewPatientViewController.swift */; };
+		22FC428F1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC428D1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift */; };
+		22FC42901C9ED2AB00745EFD /* LegacyInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC428E1C9ED2AB00745EFD /* LegacyInputTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,13 +105,23 @@
 		2248C9DF1C78B17D008067D0 /* EasyToxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyToxTests.swift; sourceTree = "<group>"; };
 		2248C9E11C78B17D008067D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22654D441C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicistAssignmentDetails.xib; sourceTree = "<group>"; };
-		22654D461C8EBB2200E6EBE8 /* LegacyInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LegacyInputView.xib; sourceTree = "<group>"; };
-		22654D481C8EBECC00E6EBE8 /* LegacyInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyInputView.swift; sourceTree = "<group>"; };
 		22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewCaseViewController.swift; sourceTree = "<group>"; };
 		22654D4C1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicistTableViewCell.swift; sourceTree = "<group>"; };
 		22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicistTableViewCell.xib; sourceTree = "<group>"; };
+		228612C51C9EDECA002A1442 /* ButtonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsTableViewCell.swift; sourceTree = "<group>"; };
+		228612C61C9EDECA002A1442 /* ButtonsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsTableViewCell.xib; sourceTree = "<group>"; };
+		228612C91C9EE218002A1442 /* InsuranceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceTableViewCell.swift; sourceTree = "<group>"; };
+		228612CA1C9EE218002A1442 /* InsuranceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsuranceTableViewCell.xib; sourceTree = "<group>"; };
+		228612CD1C9F0403002A1442 /* PatientForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientForm.swift; sourceTree = "<group>"; };
+		228612CF1C9F05ED002A1442 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		228612D11C9F0854002A1442 /* EasyTox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyTox-Bridging-Header.h"; sourceTree = "<group>"; };
+		228612E41C9F08C1002A1442 /* PatientDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PatientDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		228612E51C9F08C1002A1442 /* PatientDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDetails.swift; sourceTree = "<group>"; };
+		228612EA1C9F1169002A1442 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		228612EB1C9F1169002A1442 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		228612EE1C9F1A6C002A1442 /* CaseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseListViewController.swift; sourceTree = "<group>"; };
 		228C59101C8B55F80064C374 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -101,6 +133,17 @@
 		228C59451C8EA6860064C374 /* PatientDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailsView.xib; sourceTree = "<group>"; };
 		22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTextFieldView.xib; sourceTree = "<group>"; };
 		22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		22FC42701C9E6AB200745EFD /* HeaderCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellTableViewCell.swift; sourceTree = "<group>"; };
+		22FC42711C9E6AB200745EFD /* HeaderCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCellTableViewCell.xib; sourceTree = "<group>"; };
+		22FC42771C9E8CF600745EFD /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		22FC427A1C9E9CE400745EFD /* CaseForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseForm.swift; sourceTree = "<group>"; };
+		22FC42831C9EC55400745EFD /* TripleCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripleCellTableViewCell.swift; sourceTree = "<group>"; };
+		22FC42841C9EC55400745EFD /* TripleCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripleCellTableViewCell.xib; sourceTree = "<group>"; };
+		22FC42871C9EC5EB00745EFD /* DobAgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DobAgeTableViewCell.swift; sourceTree = "<group>"; };
+		22FC42881C9EC5EB00745EFD /* DobAgeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DobAgeTableViewCell.xib; sourceTree = "<group>"; };
+		22FC428B1C9EC6ED00745EFD /* NewPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
+		22FC428D1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyInputTableViewCell.swift; sourceTree = "<group>"; };
+		22FC428E1C9ED2AB00745EFD /* LegacyInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LegacyInputTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,13 +191,19 @@
 				228C59101C8B55F80064C374 /* GlobalConstants.swift */,
 				2248C9C91C78B17D008067D0 /* ViewController.swift */,
 				228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */,
+				22FC428B1C9EC6ED00745EFD /* NewPatientViewController.swift */,
 				22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */,
+				228612EE1C9F1A6C002A1442 /* CaseListViewController.swift */,
+				2229E87B1C9DFEB0002D34E2 /* PickerViewController.swift */,
 				2248C9CB1C78B17D008067D0 /* Main.storyboard */,
 				2248C9D11C78B17D008067D0 /* Assets.xcassets */,
 				2248C9D31C78B17D008067D0 /* LaunchScreen.storyboard */,
 				2248C9D61C78B17D008067D0 /* Info.plist */,
 				2248C9CE1C78B17D008067D0 /* EasyTox.xcdatamodeld */,
 				228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */,
+				22FC42791C9E9CCB00745EFD /* classes */,
+				22FC42761C9E8CD100745EFD /* Extensions */,
+				228612D11C9F0854002A1442 /* EasyTox-Bridging-Header.h */,
 			);
 			path = EasyTox;
 			sourceTree = "<group>";
@@ -171,21 +220,33 @@
 		22654D431C8EBABF00E6EBE8 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				22FC427C1C9EB94D00745EFD /* Patient */,
 				22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */,
 				22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */,
-				22654D461C8EBB2200E6EBE8 /* LegacyInputView.xib */,
-				22654D481C8EBECC00E6EBE8 /* LegacyInputView.swift */,
 				22654D4C1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift */,
 				2229E87D1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift */,
 				2229E87E1C9E0A62002D34E2 /* PatientInfoTableViewCell.xib */,
 				22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */,
 				22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */,
 				22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */,
-				2229E87B1C9DFEB0002D34E2 /* PickerViewController.swift */,
 				2229E8811C9E60E9002D34E2 /* SingleFieldTableViewCell.swift */,
 				2229E8821C9E60E9002D34E2 /* SingleFieldTableViewCell.xib */,
 				2229E8851C9E620E002D34E2 /* DoubleFieldTableViewCell.swift */,
 				2229E8861C9E620E002D34E2 /* DoubleFieldTableViewCell.xib */,
+				22FC42701C9E6AB200745EFD /* HeaderCellTableViewCell.swift */,
+				22FC42711C9E6AB200745EFD /* HeaderCellTableViewCell.xib */,
+				22FC42831C9EC55400745EFD /* TripleCellTableViewCell.swift */,
+				22FC42841C9EC55400745EFD /* TripleCellTableViewCell.xib */,
+				22FC42871C9EC5EB00745EFD /* DobAgeTableViewCell.swift */,
+				22FC42881C9EC5EB00745EFD /* DobAgeTableViewCell.xib */,
+				22FC428D1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift */,
+				22FC428E1C9ED2AB00745EFD /* LegacyInputTableViewCell.xib */,
+				228612C51C9EDECA002A1442 /* ButtonsTableViewCell.swift */,
+				228612C61C9EDECA002A1442 /* ButtonsTableViewCell.xib */,
+				228612C91C9EE218002A1442 /* InsuranceTableViewCell.swift */,
+				228612CA1C9EE218002A1442 /* InsuranceTableViewCell.xib */,
+				228612EA1C9F1169002A1442 /* ListTableViewCell.swift */,
+				228612EB1C9F1169002A1442 /* ListTableViewCell.xib */,
 			);
 			name = Reusables;
 			sourceTree = "<group>";
@@ -260,6 +321,33 @@
 				22654D441C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib */,
 			);
 			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		22FC42761C9E8CD100745EFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22FC42771C9E8CF600745EFD /* UITextFieldExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		22FC42791C9E9CCB00745EFD /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				22FC427A1C9E9CE400745EFD /* CaseForm.swift */,
+				228612CD1C9F0403002A1442 /* PatientForm.swift */,
+				228612CF1C9F05ED002A1442 /* CoreDataHandler.swift */,
+				228612E41C9F08C1002A1442 /* PatientDetails+CoreDataProperties.swift */,
+				228612E51C9F08C1002A1442 /* PatientDetails.swift */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		22FC427C1C9EB94D00745EFD /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Patient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,19 +432,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				228C59271C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */,
+				22FC42901C9ED2AB00745EFD /* LegacyInputTableViewCell.xib in Resources */,
 				2248C9D51C78B17D008067D0 /* LaunchScreen.storyboard in Resources */,
 				22654D4F1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib in Resources */,
 				2248C9D21C78B17D008067D0 /* Assets.xcassets in Resources */,
 				228C592B1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */,
 				2229E8881C9E620E002D34E2 /* DoubleFieldTableViewCell.xib in Resources */,
+				228612C81C9EDECA002A1442 /* ButtonsTableViewCell.xib in Resources */,
+				22FC428A1C9EC5EB00745EFD /* DobAgeTableViewCell.xib in Resources */,
+				228612ED1C9F1169002A1442 /* ListTableViewCell.xib in Resources */,
 				2229E8841C9E60E9002D34E2 /* SingleFieldTableViewCell.xib in Resources */,
 				2248C9CD1C78B17D008067D0 /* Main.storyboard in Resources */,
+				22FC42731C9E6AB200745EFD /* HeaderCellTableViewCell.xib in Resources */,
 				22654D531C97E35F00E6EBE8 /* PhysicistTableViewCell.xib in Resources */,
 				228C59461C8EA6860064C374 /* PatientDetailsView.xib in Resources */,
+				228612CC1C9EE218002A1442 /* InsuranceTableViewCell.xib in Resources */,
 				22654D451C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib in Resources */,
 				2229E8801C9E0A62002D34E2 /* PatientInfoTableViewCell.xib in Resources */,
 				22E10EFC1C8EABEE00CB0356 /* CustomTextFieldView.xib in Resources */,
-				22654D471C8EBB2200E6EBE8 /* LegacyInputView.xib in Resources */,
+				22FC42861C9EC55400745EFD /* TripleCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,20 +474,34 @@
 				2229E8831C9E60E9002D34E2 /* SingleFieldTableViewCell.swift in Sources */,
 				2229E8871C9E620E002D34E2 /* DoubleFieldTableViewCell.swift in Sources */,
 				2229E87C1C9DFEB0002D34E2 /* PickerViewController.swift in Sources */,
-				22654D491C8EBECC00E6EBE8 /* LegacyInputView.swift in Sources */,
 				228C59421C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */,
 				22654D4E1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift in Sources */,
+				22FC42781C9E8CF600745EFD /* UITextFieldExtensions.swift in Sources */,
 				2248C9D01C78B17D008067D0 /* EasyTox.xcdatamodeld in Sources */,
 				2248C9CA1C78B17D008067D0 /* ViewController.swift in Sources */,
 				22E10EFE1C8EADF100CB0356 /* CustomTextFieldView.swift in Sources */,
 				228C593F1C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */,
+				228612CB1C9EE218002A1442 /* InsuranceTableViewCell.swift in Sources */,
 				228C59111C8B55F80064C374 /* GlobalConstants.swift in Sources */,
+				22FC42891C9EC5EB00745EFD /* DobAgeTableViewCell.swift in Sources */,
 				22654D521C97E35F00E6EBE8 /* PhysicistTableViewCell.swift in Sources */,
+				228612EF1C9F1A6C002A1442 /* CaseListViewController.swift in Sources */,
 				2248C9C81C78B17D008067D0 /* AppDelegate.swift in Sources */,
+				228612E61C9F08C1002A1442 /* PatientDetails+CoreDataProperties.swift in Sources */,
+				22FC427B1C9E9CE400745EFD /* CaseForm.swift in Sources */,
+				228612CE1C9F0403002A1442 /* PatientForm.swift in Sources */,
+				228612E71C9F08C1002A1442 /* PatientDetails.swift in Sources */,
 				228C59291C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */,
+				228612EC1C9F1169002A1442 /* ListTableViewCell.swift in Sources */,
+				22FC428C1C9EC6ED00745EFD /* NewPatientViewController.swift in Sources */,
+				22FC428F1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift in Sources */,
 				228C59251C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */,
+				228612D01C9F05ED002A1442 /* CoreDataHandler.swift in Sources */,
+				22FC42721C9E6AB200745EFD /* HeaderCellTableViewCell.swift in Sources */,
 				2229E87F1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift in Sources */,
+				22FC42851C9EC55400745EFD /* TripleCellTableViewCell.swift in Sources */,
 				228C592D1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */,
+				228612C71C9EDECA002A1442 /* ButtonsTableViewCell.swift in Sources */,
 				22654D4B1C97B98100E6EBE8 /* AddNewCaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +511,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				228C59431C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */,
+				228612E81C9F0E92002A1442 /* CoreDataHandler.swift in Sources */,
+				228612E91C9F0FD2002A1442 /* PatientDetails.swift in Sources */,
 				228C59131C8B56000064C374 /* AppDelegate.swift in Sources */,
 				228C59121C8B55F80064C374 /* GlobalConstants.swift in Sources */,
 				228C59401C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */,
@@ -531,10 +641,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyTox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyTox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyTox/EasyTox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -543,10 +656,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyTox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyTox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyTox/EasyTox-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
