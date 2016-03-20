@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="605" height="499"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-p7-3iC" userLabel="Patient" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="8" y="15" width="589" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="Ck6-dh-Mkg"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Patient"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Select Patient"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Patient"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-l5-WQ6" userLabel="Case#" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="8" y="108" width="290.5" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="D5P-yi-r5c"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Case Accession"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Patient"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="D5P-yi-r5c"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t65-qQ-Yby" userLabel="collected" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="8" y="201" width="290.5" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="6Nd-up-3CD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Date Collected"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Collected"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6Nd-up-3CD"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-tH-bT4" userLabel="ctype" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="8" y="294" width="290.5" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="fGA-sH-AfU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="CaseType"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Case Type"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="fGA-sH-AfU"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-s0-c6b" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="306.5" y="294" width="290" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="BBD-8a-ge5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Logged in By"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Collected"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="BBD-8a-ge5"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrN-wp-18F" userLabel="record" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="306.5" y="108" width="290" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="M9K-nu-xQq"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Medical Record"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Patient"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="M9K-nu-xQq"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3by-1n-jfM" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="306.5" y="201" width="290" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="LTh-dy-3en"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Date Received"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Received"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="LTh-dy-3en"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjQ-9t-TLD" userLabel="medicine" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <rect key="frame" x="8" y="387" width="290.5" height="85"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="116" id="Ri1-1x-HFQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Medicine"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Case Type"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ri1-1x-HFQ"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3by-1n-jfM" firstAttribute="leading" secondItem="rrN-wp-18F" secondAttribute="leading" id="0nV-G1-MKx"/>
+                <constraint firstItem="t65-qQ-Yby" firstAttribute="top" secondItem="qSf-l5-WQ6" secondAttribute="bottom" constant="8" id="2cK-Ym-qZt"/>
+                <constraint firstItem="rjQ-9t-TLD" firstAttribute="leading" secondItem="zmm-tH-bT4" secondAttribute="leading" id="5sl-Dr-P2b"/>
+                <constraint firstItem="3by-1n-jfM" firstAttribute="height" secondItem="rrN-wp-18F" secondAttribute="height" id="84x-29-myi"/>
+                <constraint firstItem="qvN-s0-c6b" firstAttribute="top" secondItem="3by-1n-jfM" secondAttribute="bottom" constant="8" id="F9s-7c-dd6"/>
+                <constraint firstItem="qvN-s0-c6b" firstAttribute="height" secondItem="3by-1n-jfM" secondAttribute="height" id="JIx-jG-eFm"/>
+                <constraint firstItem="rrN-wp-18F" firstAttribute="top" secondItem="6Yd-p7-3iC" secondAttribute="bottom" constant="8" id="JnT-Rw-3Qe"/>
+                <constraint firstItem="qvN-s0-c6b" firstAttribute="leading" secondItem="3by-1n-jfM" secondAttribute="leading" id="Jt6-vb-XZ5"/>
+                <constraint firstItem="zmm-tH-bT4" firstAttribute="trailing" secondItem="t65-qQ-Yby" secondAttribute="trailing" id="RoM-vP-W1c"/>
+                <constraint firstItem="3by-1n-jfM" firstAttribute="top" secondItem="rrN-wp-18F" secondAttribute="bottom" constant="8" id="VtS-YP-xFi"/>
+                <constraint firstItem="6Yd-p7-3iC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="WKi-bq-Ly5"/>
+                <constraint firstItem="rrN-wp-18F" firstAttribute="leading" secondItem="6Yd-p7-3iC" secondAttribute="centerX" constant="4" id="WZ6-u3-FcR"/>
+                <constraint firstItem="qSf-l5-WQ6" firstAttribute="top" secondItem="6Yd-p7-3iC" secondAttribute="bottom" constant="8" id="XFh-Q5-Oia"/>
+                <constraint firstItem="zmm-tH-bT4" firstAttribute="top" secondItem="t65-qQ-Yby" secondAttribute="bottom" constant="8" id="YQa-5m-cmP"/>
+                <constraint firstItem="rrN-wp-18F" firstAttribute="trailing" secondItem="6Yd-p7-3iC" secondAttribute="trailing" id="YRw-jh-k3N"/>
+                <constraint firstItem="t65-qQ-Yby" firstAttribute="height" secondItem="qSf-l5-WQ6" secondAttribute="height" id="aYf-kD-EKo"/>
+                <constraint firstItem="qSf-l5-WQ6" firstAttribute="trailing" secondItem="6Yd-p7-3iC" secondAttribute="centerX" constant="-4" id="cJg-gR-rwK"/>
+                <constraint firstItem="qSf-l5-WQ6" firstAttribute="leading" secondItem="6Yd-p7-3iC" secondAttribute="leading" id="cTy-MU-AtJ"/>
+                <constraint firstItem="rjQ-9t-TLD" firstAttribute="top" secondItem="zmm-tH-bT4" secondAttribute="bottom" constant="8" id="fS6-ND-q4X"/>
+                <constraint firstItem="zmm-tH-bT4" firstAttribute="leading" secondItem="t65-qQ-Yby" secondAttribute="leading" id="g7g-BD-2Zf"/>
+                <constraint firstItem="t65-qQ-Yby" firstAttribute="leading" secondItem="qSf-l5-WQ6" secondAttribute="leading" id="k1Y-r8-shT"/>
+                <constraint firstItem="rrN-wp-18F" firstAttribute="width" secondItem="6Yd-p7-3iC" secondAttribute="width" id="ocL-7y-onI"/>
+                <constraint firstItem="3by-1n-jfM" firstAttribute="trailing" secondItem="rrN-wp-18F" secondAttribute="trailing" id="r1a-9q-VwW"/>
+                <constraint firstAttribute="trailing" secondItem="6Yd-p7-3iC" secondAttribute="trailing" constant="8" id="rQG-sJ-2Eb"/>
+                <constraint firstItem="rjQ-9t-TLD" firstAttribute="trailing" secondItem="zmm-tH-bT4" secondAttribute="trailing" id="uEn-KM-Q58"/>
+                <constraint firstItem="t65-qQ-Yby" firstAttribute="trailing" secondItem="qSf-l5-WQ6" secondAttribute="trailing" id="vtx-t8-tHc"/>
+                <constraint firstItem="rjQ-9t-TLD" firstAttribute="height" secondItem="zmm-tH-bT4" secondAttribute="height" id="wuI-Kn-3zJ"/>
+                <constraint firstItem="zmm-tH-bT4" firstAttribute="height" secondItem="t65-qQ-Yby" secondAttribute="height" id="xAp-t2-bL3"/>
+                <constraint firstItem="qvN-s0-c6b" firstAttribute="trailing" secondItem="3by-1n-jfM" secondAttribute="trailing" id="xms-ej-NHR"/>
+                <constraint firstItem="qSf-l5-WQ6" firstAttribute="height" secondItem="6Yd-p7-3iC" secondAttribute="height" id="yNc-f5-Lsj"/>
+                <constraint firstItem="6Yd-p7-3iC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="zp7-t2-t7d"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ocL-7y-onI"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="397.5" y="220.5"/>
+        </view>
+    </objects>
+</document>

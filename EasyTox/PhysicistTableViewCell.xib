@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="641" id="KGk-i7-Jjw" customClass="PhysicistTableViewCell" customModule="EasyTox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="641"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="768" height="640.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74o-PG-uLm">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physician Assignment Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fa-qr-lVh">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="updown" translatesAutoresizingMaskIntoConstraints="NO" id="a43-PR-Dg4">
+                                <rect key="frame" x="743" y="5" width="25" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="dxF-BA-Cam"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWS-Rm-WoO">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="1yV-q3-5uW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1yV-q3-5uW"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="collapseCell:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cOW-Og-ZnR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69908766779999998" green="0.78845952180000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a43-PR-Dg4" secondAttribute="trailing" id="3gz-kf-3Je"/>
+                            <constraint firstAttribute="trailing" secondItem="TWS-Rm-WoO" secondAttribute="trailing" id="AGf-EL-wdG"/>
+                            <constraint firstAttribute="trailing" secondItem="9Fa-qr-lVh" secondAttribute="trailing" id="CXL-Je-lfO"/>
+                            <constraint firstItem="9Fa-qr-lVh" firstAttribute="top" secondItem="74o-PG-uLm" secondAttribute="top" id="L0c-iX-AoN"/>
+                            <constraint firstAttribute="height" constant="40" id="V9z-Rx-4Ge"/>
+                            <constraint firstAttribute="bottom" secondItem="a43-PR-Dg4" secondAttribute="bottom" constant="5" id="VgV-Di-n8e"/>
+                            <constraint firstItem="TWS-Rm-WoO" firstAttribute="top" secondItem="74o-PG-uLm" secondAttribute="top" id="eY5-mJ-xI7"/>
+                            <constraint firstItem="TWS-Rm-WoO" firstAttribute="leading" secondItem="74o-PG-uLm" secondAttribute="leading" id="h1z-13-0NV"/>
+                            <constraint firstAttribute="bottom" secondItem="9Fa-qr-lVh" secondAttribute="bottom" id="hpm-1z-vJn"/>
+                            <constraint firstItem="9Fa-qr-lVh" firstAttribute="leading" secondItem="74o-PG-uLm" secondAttribute="leading" id="hty-2h-NFL"/>
+                            <constraint firstItem="TWS-Rm-WoO" firstAttribute="leading" secondItem="74o-PG-uLm" secondAttribute="leading" constant="356" id="mFv-pH-T6c"/>
+                            <constraint firstAttribute="bottom" secondItem="TWS-Rm-WoO" secondAttribute="bottom" id="nsI-gD-J1p"/>
+                            <constraint firstItem="a43-PR-Dg4" firstAttribute="top" secondItem="74o-PG-uLm" secondAttribute="top" constant="5" id="ztw-xK-EEk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mFv-pH-T6c"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xww-el-l9u">
+                        <rect key="frame" x="0.0" y="40" width="768" height="600.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jG-eL-im1" userLabel="primaryp" customClass="LegacyInputView" customModule="EasyTox" customModuleProvider="target">
+                                <rect key="frame" x="8" y="15" width="752" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="WrQ-xx-PHS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Primary Physician"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="  Select Physician"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUs-og-q8L" userLabel="secondaryp" customClass="LegacyInputView" customModule="EasyTox" customModuleProvider="target">
+                                <rect key="frame" x="8" y="78" width="752" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="mZw-Nk-t0a"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Secondary Physician"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="  Select Physician"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mZw-Nk-t0a"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGm-BH-7Sf" userLabel="ccp" customClass="LegacyInputView" customModule="EasyTox" customModuleProvider="target">
+                                <rect key="frame" x="8" y="141" width="752" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="RUb-87-irX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Cc Physician"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="  Select Physician"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RUb-87-irX"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmI-rg-GJT" userLabel="compound profile" customClass="LegacyInputView" customModule="EasyTox" customModuleProvider="target">
+                                <rect key="frame" x="8" y="204" width="752" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="Wif-TE-G7c"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Compound Profile"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="  Select Profile"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Wif-TE-G7c"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxl-dR-6Wm" userLabel="pathologist Id" customClass="LegacyInputView" customModule="EasyTox" customModuleProvider="target">
+                                <rect key="frame" x="8" y="267" width="752" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="ibV-Gd-B90"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Pathologist ID"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="  Select Pathologist"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ibV-Gd-B90"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugc-EX-tdA" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                                <rect key="frame" x="8" y="325" width="376" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Bqv-pa-U1E"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Final Interpretation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXv-5a-pA4">
+                                <rect key="frame" x="414" y="325" width="346" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show on Report" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdR-Ov-ybd">
+                                        <rect key="frame" x="121" y="31" width="125" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="Oma-rN-jKf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nv8-Rr-d2L">
+                                        <rect key="frame" x="62" y="25.5" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xdR-Ov-ybd" firstAttribute="centerY" secondItem="kXv-5a-pA4" secondAttribute="centerY" id="F9R-5J-Z6d"/>
+                                    <constraint firstAttribute="trailing" secondItem="xdR-Ov-ybd" secondAttribute="trailing" constant="100" id="GBs-ne-ONg"/>
+                                    <constraint firstAttribute="bottom" secondItem="xdR-Ov-ybd" secondAttribute="bottom" constant="7" id="OJq-Y6-DtE"/>
+                                    <constraint firstItem="xdR-Ov-ybd" firstAttribute="leading" secondItem="nv8-Rr-d2L" secondAttribute="trailing" constant="10" id="VcW-PS-68w"/>
+                                    <constraint firstItem="nv8-Rr-d2L" firstAttribute="centerY" secondItem="xdR-Ov-ybd" secondAttribute="centerY" id="o0z-3C-cpy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="F9R-5J-Z6d"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evr-W0-vTt" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                                <rect key="frame" x="8" y="410" width="376" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Lzi-Mr-n6A"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="header" value="Insurance Type"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Select Insurance Type"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Insurance Type"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13F-NI-2Vj">
+                                <rect key="frame" x="8" y="495" width="752" height="85"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2X0-X9-4Be" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="376" height="85"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="J8p-iI-qEt"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="header" value="Injury Date"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="J8p-iI-qEt"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4B-ts-4PO" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                                        <rect key="frame" x="376" y="0.0" width="376" height="85"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="ChO-UO-vIj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="header" value="Claim Number"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ChO-UO-vIj"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2X0-X9-4Be" secondAttribute="bottom" id="1Ol-oh-tp6"/>
+                                    <constraint firstItem="v4B-ts-4PO" firstAttribute="leading" secondItem="2X0-X9-4Be" secondAttribute="trailing" id="1Py-KF-p50"/>
+                                    <constraint firstItem="2X0-X9-4Be" firstAttribute="leading" secondItem="13F-NI-2Vj" secondAttribute="leading" id="3ks-lv-8qF"/>
+                                    <constraint firstItem="v4B-ts-4PO" firstAttribute="centerX" secondItem="13F-NI-2Vj" secondAttribute="leading" id="6bx-T9-rBs"/>
+                                    <constraint firstItem="v4B-ts-4PO" firstAttribute="centerX" secondItem="13F-NI-2Vj" secondAttribute="leading" id="89h-sV-de4"/>
+                                    <constraint firstAttribute="centerX" secondItem="2X0-X9-4Be" secondAttribute="trailing" id="K6C-gd-V2c"/>
+                                    <constraint firstAttribute="trailing" secondItem="v4B-ts-4PO" secondAttribute="trailing" id="f00-i9-qqb"/>
+                                    <constraint firstItem="v4B-ts-4PO" firstAttribute="top" secondItem="13F-NI-2Vj" secondAttribute="top" id="g6F-uZ-KRI"/>
+                                    <constraint firstItem="2X0-X9-4Be" firstAttribute="leading" secondItem="v4B-ts-4PO" secondAttribute="trailing" id="jSV-uy-3jL"/>
+                                    <constraint firstAttribute="bottom" secondItem="v4B-ts-4PO" secondAttribute="bottom" id="kxU-Tc-WFd"/>
+                                    <constraint firstItem="2X0-X9-4Be" firstAttribute="top" secondItem="13F-NI-2Vj" secondAttribute="top" id="x4g-SY-K8y"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jSV-uy-3jL"/>
+                                        <exclude reference="6bx-T9-rBs"/>
+                                        <exclude reference="89h-sV-de4"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BGm-BH-7Sf" firstAttribute="trailing" secondItem="xUs-og-q8L" secondAttribute="trailing" id="15A-gU-4in"/>
+                            <constraint firstItem="13F-NI-2Vj" firstAttribute="trailing" secondItem="evr-W0-vTt" secondAttribute="trailing" id="1HB-vH-gm5"/>
+                            <constraint firstItem="Ugc-EX-tdA" firstAttribute="top" secondItem="Sxl-dR-6Wm" secondAttribute="bottom" id="3ML-dZ-JvZ"/>
+                            <constraint firstItem="Sxl-dR-6Wm" firstAttribute="top" secondItem="hmI-rg-GJT" secondAttribute="bottom" constant="5" id="4li-JP-1Et"/>
+                            <constraint firstItem="evr-W0-vTt" firstAttribute="leading" secondItem="Ugc-EX-tdA" secondAttribute="leading" id="6Lf-T6-u0b"/>
+                            <constraint firstItem="kXv-5a-pA4" firstAttribute="leading" secondItem="Sxl-dR-6Wm" secondAttribute="centerX" constant="30" id="6jO-gD-2QQ"/>
+                            <constraint firstAttribute="trailing" secondItem="7jG-eL-im1" secondAttribute="trailing" constant="8" id="84x-We-fva"/>
+                            <constraint firstItem="hmI-rg-GJT" firstAttribute="height" secondItem="BGm-BH-7Sf" secondAttribute="height" id="8vb-gW-nOu"/>
+                            <constraint firstItem="kXv-5a-pA4" firstAttribute="top" secondItem="Ugc-EX-tdA" secondAttribute="top" id="AKh-k7-rjR"/>
+                            <constraint firstItem="Ugc-EX-tdA" firstAttribute="top" secondItem="kXv-5a-pA4" secondAttribute="bottom" constant="5" id="Aj0-H6-KaQ"/>
+                            <constraint firstItem="Sxl-dR-6Wm" firstAttribute="leading" secondItem="hmI-rg-GJT" secondAttribute="leading" id="Cg0-GW-M1r"/>
+                            <constraint firstItem="xUs-og-q8L" firstAttribute="top" secondItem="7jG-eL-im1" secondAttribute="bottom" constant="5" id="CxC-fZ-Oyr"/>
+                            <constraint firstItem="Sxl-dR-6Wm" firstAttribute="trailing" secondItem="hmI-rg-GJT" secondAttribute="trailing" id="DYA-Ul-knR"/>
+                            <constraint firstItem="BGm-BH-7Sf" firstAttribute="leading" secondItem="xUs-og-q8L" secondAttribute="leading" id="LiB-5v-mg2"/>
+                            <constraint firstItem="7jG-eL-im1" firstAttribute="top" secondItem="xww-el-l9u" secondAttribute="top" constant="15" id="M6R-G8-8AK"/>
+                            <constraint firstItem="evr-W0-vTt" firstAttribute="trailing" secondItem="Ugc-EX-tdA" secondAttribute="trailing" id="NeA-tX-PDU"/>
+                            <constraint firstItem="13F-NI-2Vj" firstAttribute="top" secondItem="evr-W0-vTt" secondAttribute="bottom" id="QMd-1K-fHg"/>
+                            <constraint firstItem="Ugc-EX-tdA" firstAttribute="leading" secondItem="Sxl-dR-6Wm" secondAttribute="leading" id="RMf-UY-Mu1"/>
+                            <constraint firstItem="evr-W0-vTt" firstAttribute="height" secondItem="Ugc-EX-tdA" secondAttribute="height" id="S7g-gt-k5i"/>
+                            <constraint firstItem="kXv-5a-pA4" firstAttribute="height" secondItem="Sxl-dR-6Wm" secondAttribute="height" id="W7x-eD-sVw"/>
+                            <constraint firstItem="evr-W0-vTt" firstAttribute="top" secondItem="Ugc-EX-tdA" secondAttribute="bottom" id="XgR-XE-EYk"/>
+                            <constraint firstItem="xUs-og-q8L" firstAttribute="leading" secondItem="7jG-eL-im1" secondAttribute="leading" id="iUQ-4O-nUX"/>
+                            <constraint firstItem="xUs-og-q8L" firstAttribute="trailing" secondItem="7jG-eL-im1" secondAttribute="trailing" id="jQ1-R4-qbI"/>
+                            <constraint firstItem="kXv-5a-pA4" firstAttribute="trailing" secondItem="Sxl-dR-6Wm" secondAttribute="trailing" id="jl0-FJ-NkK"/>
+                            <constraint firstItem="13F-NI-2Vj" firstAttribute="leading" secondItem="evr-W0-vTt" secondAttribute="leading" id="kD5-iC-wKW"/>
+                            <constraint firstItem="7jG-eL-im1" firstAttribute="leading" secondItem="xww-el-l9u" secondAttribute="leading" constant="8" id="kbu-NG-gj5"/>
+                            <constraint firstItem="13F-NI-2Vj" firstAttribute="height" secondItem="evr-W0-vTt" secondAttribute="height" id="kpb-Sc-tQk"/>
+                            <constraint firstItem="hmI-rg-GJT" firstAttribute="leading" secondItem="BGm-BH-7Sf" secondAttribute="leading" id="lfn-A1-BdJ"/>
+                            <constraint firstItem="Sxl-dR-6Wm" firstAttribute="height" secondItem="hmI-rg-GJT" secondAttribute="height" id="mMT-J7-qrZ"/>
+                            <constraint firstItem="xUs-og-q8L" firstAttribute="height" secondItem="7jG-eL-im1" secondAttribute="height" id="tNh-io-w9N"/>
+                            <constraint firstItem="BGm-BH-7Sf" firstAttribute="top" secondItem="xUs-og-q8L" secondAttribute="bottom" constant="5" id="urg-Kb-NEC"/>
+                            <constraint firstItem="hmI-rg-GJT" firstAttribute="top" secondItem="BGm-BH-7Sf" secondAttribute="bottom" constant="5" id="uuW-Ux-bkM"/>
+                            <constraint firstItem="BGm-BH-7Sf" firstAttribute="height" secondItem="xUs-og-q8L" secondAttribute="height" id="xE9-Vh-iKY"/>
+                            <constraint firstItem="hmI-rg-GJT" firstAttribute="trailing" secondItem="BGm-BH-7Sf" secondAttribute="trailing" id="xeh-ud-w6n"/>
+                            <constraint firstItem="13F-NI-2Vj" firstAttribute="trailing" secondItem="Sxl-dR-6Wm" secondAttribute="trailing" id="xj3-mm-SMe"/>
+                            <constraint firstItem="Ugc-EX-tdA" firstAttribute="trailing" secondItem="Sxl-dR-6Wm" secondAttribute="centerX" id="zPa-Ds-y29"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Aj0-H6-KaQ"/>
+                                <exclude reference="1HB-vH-gm5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xww-el-l9u" secondAttribute="trailing" id="0I3-1G-jWg"/>
+                    <constraint firstItem="xww-el-l9u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="73P-xD-5YT"/>
+                    <constraint firstItem="xww-el-l9u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HEJ-t9-m3r"/>
+                    <constraint firstItem="74o-PG-uLm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VgS-iP-9fL"/>
+                    <constraint firstAttribute="trailing" secondItem="74o-PG-uLm" secondAttribute="trailing" id="X45-g4-cLN"/>
+                    <constraint firstItem="xww-el-l9u" firstAttribute="top" secondItem="74o-PG-uLm" secondAttribute="bottom" id="ayH-U1-DfM"/>
+                    <constraint firstItem="74o-PG-uLm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nWQ-1k-ANd"/>
+                    <constraint firstAttribute="bottom" secondItem="xww-el-l9u" secondAttribute="bottom" id="qL9-4L-Xqb"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="73P-xD-5YT"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="detalisView" destination="xww-el-l9u" id="PE1-L9-fdu"/>
+            </connections>
+            <point key="canvasLocation" x="269" y="451.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="updown" width="128" height="128"/>
+    </resources>
+</document>

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2229E87C1C9DFEB0002D34E2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229E87B1C9DFEB0002D34E2 /* PickerViewController.swift */; };
+		2229E87F1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229E87D1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift */; };
+		2229E8801C9E0A62002D34E2 /* PatientInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2229E87E1C9E0A62002D34E2 /* PatientInfoTableViewCell.xib */; };
+		2229E8831C9E60E9002D34E2 /* SingleFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229E8811C9E60E9002D34E2 /* SingleFieldTableViewCell.swift */; };
+		2229E8841C9E60E9002D34E2 /* SingleFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2229E8821C9E60E9002D34E2 /* SingleFieldTableViewCell.xib */; };
+		2229E8871C9E620E002D34E2 /* DoubleFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2229E8851C9E620E002D34E2 /* DoubleFieldTableViewCell.swift */; };
+		2229E8881C9E620E002D34E2 /* DoubleFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2229E8861C9E620E002D34E2 /* DoubleFieldTableViewCell.xib */; };
 		2248C9C81C78B17D008067D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9C71C78B17D008067D0 /* AppDelegate.swift */; };
 		2248C9CA1C78B17D008067D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9C91C78B17D008067D0 /* ViewController.swift */; };
 		2248C9CD1C78B17D008067D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248C9CB1C78B17D008067D0 /* Main.storyboard */; };
@@ -14,6 +21,36 @@
 		2248C9D21C78B17D008067D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2248C9D11C78B17D008067D0 /* Assets.xcassets */; };
 		2248C9D51C78B17D008067D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248C9D31C78B17D008067D0 /* LaunchScreen.storyboard */; };
 		2248C9E01C78B17D008067D0 /* EasyToxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9DF1C78B17D008067D0 /* EasyToxTests.swift */; };
+		22654D451C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D441C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib */; };
+		22654D471C8EBB2200E6EBE8 /* LegacyInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D461C8EBB2200E6EBE8 /* LegacyInputView.xib */; };
+		22654D491C8EBECC00E6EBE8 /* LegacyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D481C8EBECC00E6EBE8 /* LegacyInputView.swift */; };
+		22654D4B1C97B98100E6EBE8 /* AddNewCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */; };
+		22654D4E1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D4C1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift */; };
+		22654D4F1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */; };
+		22654D521C97E35F00E6EBE8 /* PhysicistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */; };
+		22654D531C97E35F00E6EBE8 /* PhysicistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */; };
+		228C59111C8B55F80064C374 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59101C8B55F80064C374 /* GlobalConstants.swift */; };
+		228C59121C8B55F80064C374 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59101C8B55F80064C374 /* GlobalConstants.swift */; };
+		228C59131C8B56000064C374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9C71C78B17D008067D0 /* AppDelegate.swift */; };
+		228C59141C8B56030064C374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9C91C78B17D008067D0 /* ViewController.swift */; };
+		228C59251C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */; };
+		228C59261C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */; };
+		228C59271C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */; };
+		228C59281C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */; };
+		228C59291C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */; };
+		228C592A1C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */; };
+		228C592B1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */; };
+		228C592C1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */; };
+		228C592D1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */; };
+		228C592E1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */; };
+		228C593D1C8E7E5F0064C374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248C9CB1C78B17D008067D0 /* Main.storyboard */; };
+		228C593F1C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */; };
+		228C59401C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */; };
+		228C59421C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */; };
+		228C59431C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */; };
+		228C59461C8EA6860064C374 /* PatientDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C59451C8EA6860064C374 /* PatientDetailsView.xib */; };
+		22E10EFC1C8EABEE00CB0356 /* CustomTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */; };
+		22E10EFE1C8EADF100CB0356 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +64,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2229E87B1C9DFEB0002D34E2 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		2229E87D1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientInfoTableViewCell.swift; sourceTree = "<group>"; };
+		2229E87E1C9E0A62002D34E2 /* PatientInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2229E8811C9E60E9002D34E2 /* SingleFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleFieldTableViewCell.swift; sourceTree = "<group>"; };
+		2229E8821C9E60E9002D34E2 /* SingleFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleFieldTableViewCell.xib; sourceTree = "<group>"; };
+		2229E8851C9E620E002D34E2 /* DoubleFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleFieldTableViewCell.swift; sourceTree = "<group>"; };
+		2229E8861C9E620E002D34E2 /* DoubleFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleFieldTableViewCell.xib; sourceTree = "<group>"; };
 		2248C9C41C78B17D008067D0 /* EasyTox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2248C9C71C78B17D008067D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2248C9C91C78B17D008067D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +82,25 @@
 		2248C9DB1C78B17D008067D0 /* EasyToxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyToxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2248C9DF1C78B17D008067D0 /* EasyToxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyToxTests.swift; sourceTree = "<group>"; };
 		2248C9E11C78B17D008067D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22654D441C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicistAssignmentDetails.xib; sourceTree = "<group>"; };
+		22654D461C8EBB2200E6EBE8 /* LegacyInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LegacyInputView.xib; sourceTree = "<group>"; };
+		22654D481C8EBECC00E6EBE8 /* LegacyInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyInputView.swift; sourceTree = "<group>"; };
+		22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewCaseViewController.swift; sourceTree = "<group>"; };
+		22654D4C1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicistTableViewCell.swift; sourceTree = "<group>"; };
+		22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicistTableViewCell.xib; sourceTree = "<group>"; };
+		228C59101C8B55F80064C374 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCollectionViewCell.xib; sourceTree = "<group>"; };
+		228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewViewController.swift; sourceTree = "<group>"; };
+		228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		228C59451C8EA6860064C374 /* PatientDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailsView.xib; sourceTree = "<group>"; };
+		22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTextFieldView.xib; sourceTree = "<group>"; };
+		22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +142,19 @@
 		2248C9C61C78B17D008067D0 /* EasyTox */ = {
 			isa = PBXGroup;
 			children = (
+				228C59161C8CBC3A0064C374 /* CustomCollectionLayout */,
 				2248C9C71C78B17D008067D0 /* AppDelegate.swift */,
+				228C59441C8EA6470064C374 /* Custom Views */,
+				228C59101C8B55F80064C374 /* GlobalConstants.swift */,
 				2248C9C91C78B17D008067D0 /* ViewController.swift */,
+				228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */,
+				22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */,
 				2248C9CB1C78B17D008067D0 /* Main.storyboard */,
 				2248C9D11C78B17D008067D0 /* Assets.xcassets */,
 				2248C9D31C78B17D008067D0 /* LaunchScreen.storyboard */,
 				2248C9D61C78B17D008067D0 /* Info.plist */,
 				2248C9CE1C78B17D008067D0 /* EasyTox.xcdatamodeld */,
+				228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */,
 			);
 			path = EasyTox;
 			sourceTree = "<group>";
@@ -97,6 +166,100 @@
 				2248C9E11C78B17D008067D0 /* Info.plist */,
 			);
 			path = EasyToxTests;
+			sourceTree = "<group>";
+		};
+		22654D431C8EBABF00E6EBE8 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */,
+				22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */,
+				22654D461C8EBB2200E6EBE8 /* LegacyInputView.xib */,
+				22654D481C8EBECC00E6EBE8 /* LegacyInputView.swift */,
+				22654D4C1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift */,
+				2229E87D1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift */,
+				2229E87E1C9E0A62002D34E2 /* PatientInfoTableViewCell.xib */,
+				22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */,
+				22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */,
+				22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */,
+				2229E87B1C9DFEB0002D34E2 /* PickerViewController.swift */,
+				2229E8811C9E60E9002D34E2 /* SingleFieldTableViewCell.swift */,
+				2229E8821C9E60E9002D34E2 /* SingleFieldTableViewCell.xib */,
+				2229E8851C9E620E002D34E2 /* DoubleFieldTableViewCell.swift */,
+				2229E8861C9E620E002D34E2 /* DoubleFieldTableViewCell.xib */,
+			);
+			name = Reusables;
+			sourceTree = "<group>";
+		};
+		228C59161C8CBC3A0064C374 /* CustomCollectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				228C591D1C8CBC600064C374 /* Views */,
+				228C59241C8CBC600064C374 /* Classes */,
+			);
+			name = CustomCollectionLayout;
+			sourceTree = "<group>";
+		};
+		228C59191C8CBC600064C374 /* Content Cell */ = {
+			isa = PBXGroup;
+			children = (
+				228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */,
+				228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */,
+			);
+			name = "Content Cell";
+			sourceTree = "<group>";
+		};
+		228C591C1C8CBC600064C374 /* Date Cell */ = {
+			isa = PBXGroup;
+			children = (
+				228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */,
+				228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */,
+			);
+			name = "Date Cell";
+			sourceTree = "<group>";
+		};
+		228C591D1C8CBC600064C374 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				228C59191C8CBC600064C374 /* Content Cell */,
+				228C591C1C8CBC600064C374 /* Date Cell */,
+			);
+			name = Views;
+			path = ../../../CustomCollectionViewLayout/CustomCollectionLayout;
+			sourceTree = "<group>";
+		};
+		228C591F1C8CBC600064C374 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		228C59231C8CBC600064C374 /* CustomCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				228C591F1C8CBC600064C374 /* Swift */,
+			);
+			name = CustomCollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		228C59241C8CBC600064C374 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				228C59231C8CBC600064C374 /* CustomCollectionViewLayout */,
+			);
+			name = Classes;
+			path = ../../../CustomCollectionViewLayout/CustomCollectionLayout;
+			sourceTree = "<group>";
+		};
+		228C59441C8EA6470064C374 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				22654D431C8EBABF00E6EBE8 /* Reusables */,
+				228C59451C8EA6860064C374 /* PatientDetailsView.xib */,
+				22654D441C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib */,
+			);
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +343,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228C59271C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */,
 				2248C9D51C78B17D008067D0 /* LaunchScreen.storyboard in Resources */,
+				22654D4F1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib in Resources */,
 				2248C9D21C78B17D008067D0 /* Assets.xcassets in Resources */,
+				228C592B1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */,
+				2229E8881C9E620E002D34E2 /* DoubleFieldTableViewCell.xib in Resources */,
+				2229E8841C9E60E9002D34E2 /* SingleFieldTableViewCell.xib in Resources */,
 				2248C9CD1C78B17D008067D0 /* Main.storyboard in Resources */,
+				22654D531C97E35F00E6EBE8 /* PhysicistTableViewCell.xib in Resources */,
+				228C59461C8EA6860064C374 /* PatientDetailsView.xib in Resources */,
+				22654D451C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib in Resources */,
+				2229E8801C9E0A62002D34E2 /* PatientInfoTableViewCell.xib in Resources */,
+				22E10EFC1C8EABEE00CB0356 /* CustomTextFieldView.xib in Resources */,
+				22654D471C8EBB2200E6EBE8 /* LegacyInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +364,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228C593D1C8E7E5F0064C374 /* Main.storyboard in Resources */,
+				228C592C1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */,
+				228C59281C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +377,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2229E8831C9E60E9002D34E2 /* SingleFieldTableViewCell.swift in Sources */,
+				2229E8871C9E620E002D34E2 /* DoubleFieldTableViewCell.swift in Sources */,
+				2229E87C1C9DFEB0002D34E2 /* PickerViewController.swift in Sources */,
+				22654D491C8EBECC00E6EBE8 /* LegacyInputView.swift in Sources */,
+				228C59421C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */,
+				22654D4E1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift in Sources */,
 				2248C9D01C78B17D008067D0 /* EasyTox.xcdatamodeld in Sources */,
 				2248C9CA1C78B17D008067D0 /* ViewController.swift in Sources */,
+				22E10EFE1C8EADF100CB0356 /* CustomTextFieldView.swift in Sources */,
+				228C593F1C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */,
+				228C59111C8B55F80064C374 /* GlobalConstants.swift in Sources */,
+				22654D521C97E35F00E6EBE8 /* PhysicistTableViewCell.swift in Sources */,
 				2248C9C81C78B17D008067D0 /* AppDelegate.swift in Sources */,
+				228C59291C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */,
+				228C59251C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */,
+				2229E87F1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift in Sources */,
+				228C592D1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */,
+				22654D4B1C97B98100E6EBE8 /* AddNewCaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +402,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228C59431C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */,
+				228C59131C8B56000064C374 /* AppDelegate.swift in Sources */,
+				228C59121C8B55F80064C374 /* GlobalConstants.swift in Sources */,
+				228C59401C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */,
+				228C59141C8B56030064C374 /* ViewController.swift in Sources */,
 				2248C9E01C78B17D008067D0 /* EasyToxTests.swift in Sources */,
+				228C592A1C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */,
+				228C59261C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */,
+				228C592E1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyTox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -346,6 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyTox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -392,6 +594,7 @@
 				2248C9E61C78B17D008067D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2248C9E71C78B17D008067D0 /* Build configuration list for PBXNativeTarget "EasyToxTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +603,7 @@
 				2248C9E91C78B17D008067D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
