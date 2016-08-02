@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+extension UIViewController{
+    
+    func showProgressView(labelText:String){
+        let progressView = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        progressView.label.text = labelText ?? "Loading"
+    }
+    
+    func hideProgressView(){
+        MBProgressHUD.hideHUDForView(self.view, animated: true)
+    }
+}

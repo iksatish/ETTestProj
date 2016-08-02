@@ -19,6 +19,7 @@ class SingleFieldTableViewCell: UITableViewCell {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     var delegate:SingleFieldCellDelegate?
+    var pickerDelegate:PickerFieldViewDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,5 +34,8 @@ class SingleFieldTableViewCell: UITableViewCell {
     
     @IBAction func onTappingAdd(sender: UIButton) {
         self.delegate?.openNewPatientView!()
+    }
+    @IBAction func selectPatient(sender: UIButton) {
+        self.pickerDelegate?.openPickerViewForField(self.inputField, forPickerType: PickerViewType.Patient)
     }
 }

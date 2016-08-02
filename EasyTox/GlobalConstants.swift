@@ -30,3 +30,35 @@ let insuranceCellIdentifier = "insuranceCellIdentifier"
 let insButtonsCellIdentifier = "insButtonsCellIdentifier"
 
 let coredatahandler = CoreDatahandler()
+
+class Util:NSObject{
+    class func dateFor(timeStamp: String) -> NSDate
+    {
+        //Create Date Formatter
+        let dateFormatter = NSDateFormatter()
+        
+        //Specify Format of String to Parse
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+        //Parse into NSDate
+        let dateFromString : NSDate = dateFormatter.dateFromString(timeStamp)!
+        
+        //Return Parsed Date
+        return dateFromString
+    }
+    class func dateFors(timeStamp: String) -> NSDate
+    {
+        let formater = NSDateFormatter()
+        formater.dateFormat = "HH:mm:ss:SSS - MMM dd, yyyy"
+        return formater.dateFromString(timeStamp)!
+    }
+    
+    
+    class func timeStampFor(date: NSDate) -> String
+    {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss:SSS - MMM dd, yyyy"
+        
+        return dateFormatter.stringFromDate(date)
+    }
+}

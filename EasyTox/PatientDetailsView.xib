@@ -73,7 +73,7 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-s0-c6b" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-s0-c6b" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
                     <rect key="frame" x="306.5" y="294" width="290" height="85"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -90,7 +90,7 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrN-wp-18F" userLabel="record" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrN-wp-18F" userLabel="record" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
                     <rect key="frame" x="306.5" y="108" width="290" height="85"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -106,7 +106,7 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3by-1n-jfM" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3by-1n-jfM" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
                     <rect key="frame" x="306.5" y="201" width="290" height="85"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>

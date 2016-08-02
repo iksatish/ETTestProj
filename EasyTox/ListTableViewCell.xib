@@ -54,7 +54,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kb9-XN-KIf">
                         <rect key="frame" x="222" y="0.0" width="85.5" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1J-xp-iO4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Last Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1J-xp-iO4">
                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -72,7 +72,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxs-zj-bhf">
                         <rect key="frame" x="307" y="0.0" width="85.5" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8T-i0-UVb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Of Birth" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8T-i0-UVb">
                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -90,7 +90,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgj-0T-3Kw">
                         <rect key="frame" x="393" y="0.0" width="85.5" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUx-wC-2jr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Collected" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUx-wC-2jr">
                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -108,7 +108,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0f-B2-4o9">
                         <rect key="frame" x="478" y="0.0" width="85.5" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wi-rt-yeC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Record #" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wi-rt-yeC">
                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -126,7 +126,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-9d-zih">
                         <rect key="frame" x="564" y="0.0" width="85.5" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjY-2N-l2F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjY-2N-l2F">
                                 <rect key="frame" x="0.0" y="0.0" width="85.5" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -144,36 +144,56 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HR-Cr-Qho">
                         <rect key="frame" x="649" y="0.0" width="59.5" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-pg-Zs9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-pg-Zs9">
                                 <rect key="frame" x="0.0" y="0.0" width="59.5" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zE4-JF-Moh">
+                                <rect key="frame" x="10" y="3" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="58L-XT-jZ7"/>
+                                    <constraint firstAttribute="width" constant="38" id="JOe-Hr-GiD"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="cross"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zE4-JF-Moh" firstAttribute="centerY" secondItem="1HR-Cr-Qho" secondAttribute="centerY" id="5lO-vu-tDr"/>
                             <constraint firstItem="f9T-pg-Zs9" firstAttribute="height" secondItem="1HR-Cr-Qho" secondAttribute="height" id="Dci-nl-EoD"/>
                             <constraint firstItem="f9T-pg-Zs9" firstAttribute="leading" secondItem="1HR-Cr-Qho" secondAttribute="leading" id="PXC-4o-pvH"/>
                             <constraint firstItem="f9T-pg-Zs9" firstAttribute="top" secondItem="1HR-Cr-Qho" secondAttribute="top" id="edq-vc-qsG"/>
+                            <constraint firstItem="zE4-JF-Moh" firstAttribute="centerX" secondItem="1HR-Cr-Qho" secondAttribute="centerX" id="lde-yv-gTr"/>
                             <constraint firstItem="f9T-pg-Zs9" firstAttribute="width" secondItem="1HR-Cr-Qho" secondAttribute="width" id="t18-Qw-ylB"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUf-wH-px2">
                         <rect key="frame" x="708" y="0.0" width="59.5" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN1-6i-f9k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN1-6i-f9k">
                                 <rect key="frame" x="0.0" y="0.0" width="59.5" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfG-sl-l34">
+                                <rect key="frame" x="11" y="3" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="2r6-c4-pag"/>
+                                    <constraint firstAttribute="height" constant="38" id="cJ1-RZ-j05"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="cross"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZN1-6i-f9k" firstAttribute="height" secondItem="tUf-wH-px2" secondAttribute="height" id="1Gf-KR-cNR"/>
+                            <constraint firstItem="EfG-sl-l34" firstAttribute="centerX" secondItem="tUf-wH-px2" secondAttribute="centerX" id="Pqd-az-SND"/>
                             <constraint firstItem="ZN1-6i-f9k" firstAttribute="top" secondItem="tUf-wH-px2" secondAttribute="top" id="UvP-mB-KFa"/>
                             <constraint firstItem="ZN1-6i-f9k" firstAttribute="leading" secondItem="tUf-wH-px2" secondAttribute="leading" id="bY8-Sd-voa"/>
+                            <constraint firstItem="EfG-sl-l34" firstAttribute="centerY" secondItem="tUf-wH-px2" secondAttribute="centerY" id="ptZ-Ge-5Ka"/>
                             <constraint firstItem="ZN1-6i-f9k" firstAttribute="width" secondItem="tUf-wH-px2" secondAttribute="width" id="r9d-6S-W9P"/>
                         </constraints>
                     </view>
@@ -225,6 +245,31 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="actionButton" destination="zE4-JF-Moh" id="HqZ-k4-Vdm"/>
+                <outlet property="reportButton" destination="EfG-sl-l34" id="Co6-5U-VIi"/>
+                <outletCollection property="columnViews" destination="yAb-8x-iL1" collectionClass="NSMutableArray" id="ZGL-pf-B9R"/>
+                <outletCollection property="columnViews" destination="Nb0-eL-8mK" collectionClass="NSMutableArray" id="bQz-TM-2Vw"/>
+                <outletCollection property="columnViews" destination="kb9-XN-KIf" collectionClass="NSMutableArray" id="kpg-mF-pkN"/>
+                <outletCollection property="columnViews" destination="rxs-zj-bhf" collectionClass="NSMutableArray" id="Of7-Ps-mON"/>
+                <outletCollection property="columnViews" destination="pgj-0T-3Kw" collectionClass="NSMutableArray" id="FnN-Sh-PGx"/>
+                <outletCollection property="columnViews" destination="P0f-B2-4o9" collectionClass="NSMutableArray" id="BiL-s4-ZXL"/>
+                <outletCollection property="columnViews" destination="Q9w-9d-zih" collectionClass="NSMutableArray" id="u8q-mV-VpM"/>
+                <outletCollection property="columnViews" destination="1HR-Cr-Qho" collectionClass="NSMutableArray" id="Ve7-4U-8Bt"/>
+                <outletCollection property="columnViews" destination="tUf-wH-px2" collectionClass="NSMutableArray" id="jtS-9J-EVn"/>
+                <outletCollection property="textFields" destination="XWh-iy-95X" collectionClass="NSMutableArray" id="ZcJ-NJ-nVz"/>
+                <outletCollection property="textFields" destination="lGN-Gg-MZE" collectionClass="NSMutableArray" id="lQx-3F-prG"/>
+                <outletCollection property="textFields" destination="u1J-xp-iO4" collectionClass="NSMutableArray" id="saf-xw-isj"/>
+                <outletCollection property="textFields" destination="w8T-i0-UVb" collectionClass="NSMutableArray" id="FTG-GY-Bjz"/>
+                <outletCollection property="textFields" destination="RUx-wC-2jr" collectionClass="NSMutableArray" id="C0n-oB-Sh6"/>
+                <outletCollection property="textFields" destination="4Wi-rt-yeC" collectionClass="NSMutableArray" id="9xo-SH-WyI"/>
+                <outletCollection property="textFields" destination="VjY-2N-l2F" collectionClass="NSMutableArray" id="gly-tC-bpX"/>
+                <outletCollection property="textFields" destination="f9T-pg-Zs9" collectionClass="NSMutableArray" id="JJI-q3-l0I"/>
+                <outletCollection property="textFields" destination="ZN1-6i-f9k" collectionClass="NSMutableArray" id="3jU-ff-2Lb"/>
+            </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cross" width="128" height="128"/>
+    </resources>
 </document>

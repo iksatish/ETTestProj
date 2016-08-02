@@ -21,13 +21,6 @@ class HomeCollectionViewViewController: UIViewController, UICollectionViewDataSo
 //        self.collectionView.backgroundCoslor = UIColor.greenColor()
         self.collectionView.registerNib(UINib(nibName: "DateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: dateCellIdentifier)
         self.collectionView.registerNib(UINib(nibName: "ContentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: contentCellIdentifier)
-        let cd = CoreDatahandler()
-        let pats = cd.fetchPatientDetails() as [PatientDetails]
-        print("\(pats)")
-//        for pt in pats{
-//            print("\(pt.firstName)")
-//            
-//        }
     }
     
     override func viewWillAppear(animated: Bool) {

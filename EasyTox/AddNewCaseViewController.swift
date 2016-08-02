@@ -68,6 +68,7 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
                 cell.inputField.text = "Select Patient"
                 cell.inputField.setUpField(FieldType.DROPDOWN)
                 cell.delegate = self
+                cell.pickerDelegate = self
                 return cell
             }else{
                 let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCellWithIdentifier(doubleCellIdentifier)! as! DoubleFieldTableViewCell

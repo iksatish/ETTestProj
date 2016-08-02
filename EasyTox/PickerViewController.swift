@@ -25,7 +25,7 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     @IBOutlet weak var pickerViewTitle: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
-    var pickerData = []
+    var pickerData:NSMutableArray = []
     var pickerViewType:PickerViewType = .Patient
     var currentField:UITextField?
     var delegate:PickerViewCallBackDelegate?
@@ -33,7 +33,7 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         switch pickerViewType{
         case .Patient:
-            self.pickerData = ["Patient 1", "Patient 2"]
+            self.getPatients()
             self.pickerViewTitle.text = "Select Patient"
             break
         case .CaseType:
@@ -100,5 +100,12 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.currentField?.text = self.pickerData[row] as? String
 //        self.delegate?.updateFormWithPickerSelection(self.pickerData[row] as! String, forType: self.pickerViewType)
+    }
+    
+    func getPatients(){
+        let patients = coredatahandler.fetchPatientDetails() as [PatientDetails]
+        for patient in patients{
+            self.pickerData.addObject("\(patient.firstName!) \(patient.lastName!)")
+        }
     }
 }
