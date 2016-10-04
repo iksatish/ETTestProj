@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DetailsCellDelegate{
-    func collapseThisCell(rowNum:Int, isCollapsing:Bool)
+    func collapseThisCell(_ rowNum:Int, isCollapsing:Bool)
 }
 class PatientDetailsTableViewCell: UITableViewCell, UITextFieldDelegate {
     var delegate:DetailsCellDelegate?
@@ -23,20 +23,20 @@ class PatientDetailsTableViewCell: UITableViewCell, UITextFieldDelegate {
         self.patientView.curTextField.delegate = self
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    @IBAction func collapseCell(sender: UIButton) {
+    @IBAction func collapseCell(_ sender: UIButton) {
         self.isCollapsed = !self.isCollapsed
         self.delegate?.collapseThisCell(self.rowNum, isCollapsing: isCollapsed)
     }
     
     //MARK: Textfield delegates
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         
     }
     

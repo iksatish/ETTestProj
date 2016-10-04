@@ -18,11 +18,11 @@ class ListTableViewCell: UITableViewCell {
         // Initialization code
         for view in self.columnViews{
             view.layer.borderWidth = 0.5
-            view.layer.borderColor = UIColor.grayColor().CGColor
+            view.layer.borderColor = UIColor.gray.cgColor
         }
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -40,7 +40,7 @@ class ListTableViewCell: UITableViewCell {
     }
     
     //SetUp
-    func setupData(row:Int){
+    func setupData(_ row:Int){
         if row == 0{
             textFields[0].text = "Case Accession #"
             textFields[1].text = "First Name"
@@ -52,32 +52,32 @@ class ListTableViewCell: UITableViewCell {
             textFields[7].text = "Action"
             textFields[8].text = "Report"
             for label in textFields{
-                label.font = UIFont.boldSystemFontOfSize(15)
+                label.font = UIFont.boldSystemFont(ofSize: 15)
             }
-            textFields[7].hidden = false
-            textFields[8].hidden = true
-            actionButton.hidden = true
-            reportButton.hidden = true
+            textFields[7].isHidden = false
+            textFields[8].isHidden = false
+            actionButton.isHidden = true
+            reportButton.isHidden = true
 
         }else{
             
             textFields[0].text = "\(caseForm!.caseAccession)"
             textFields[1].text = "\(caseForm!.firstName)"
             textFields[2].text = "\(caseForm!.lastName)"
-            textFields[3].text = "24/Mar/1999"
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateStyle = .ShortStyle
-            textFields[4].text = "\(dateFormatter.stringFromDate(caseForm!.dateCollected))"
+            textFields[3].text = "24/Mar/1989"
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .short
+            textFields[4].text = "\(dateFormatter.string(from: caseForm!.dateCollected as Date))"
             if let recNo = caseForm?.medRecNo{
                 textFields[5].text = "\(recNo)"
             }
             textFields[6].text = "\(caseForm!.statusFlag)"
-            textFields[7].hidden = true
-            textFields[8].hidden = true
-            actionButton.hidden = false
-            reportButton.hidden = true
+            textFields[7].isHidden = true
+            textFields[8].isHidden = true
+            actionButton.isHidden = false
+            reportButton.isHidden = false
             for label in textFields{
-                label.font = UIFont.systemFontOfSize(15)
+                label.font = UIFont.systemFont(ofSize: 15)
             }
 
         }

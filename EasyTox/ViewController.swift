@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 protocol LoginDelegate{
     func onLogin()
@@ -22,11 +42,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor.clear
         self.loginView.layer.cornerRadius = 5.0
-        self.loginView.layer.borderColor = UIColor.blackColor().CGColor
+        self.loginView.layer.borderColor = UIColor.black.cgColor
         self.loginView.layer.borderWidth = 1.0
-        self.userNameField.targetForAction("valueChangedForTextField:", withSender: self)
+        self.userNameField.target(forAction: "valueChangedForTextField:", withSender: self)
         self.userNameField.delegate = self
         self.passwordField.delegate = self
     }
@@ -35,57 +55,57 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func onPressingLogin(sender: UIButton) {
+    @IBAction func onPressingLogin(_ sender: UIButton) {
         let user = UserModel()
         user.userName = self.userNameField.text!
         user.password = self.passwordField.text!
         guard user.userName?.characters.count>5 else{
-            self.errorLabel.hidden = false
+            self.errorLabel.isHidden = false
             self.errorLabel.text = "Username should be atleast 6 characters!"
             return
         }
         guard user.password?.characters.count>5 else{
-            self.errorLabel.hidden = false
+            self.errorLabel.isHidden = false
             self.errorLabel.text = "Password should be atleast 6 characters!"
             return
         }
         let ser = ServiceRequest()
         let dict = NSMutableDictionary()
         let auths = "\(user.userName):\(user.password)"
-        let authData = auths.dataUsingEncoding(NSUTF8StringEncoding)
+        let authData = auths.data(using: String.Encoding.utf8)
         dict.setValue(user.userName, forKey: "username")
         dict.setValue(user.password, forKey: "password")
-        let req = NSMutableURLRequest(URL: NSURL(string: "http://bmtechsol.com:8080/easytox/api/login")!)
-        req.HTTPBody = encodeJSON(dict )
+        let req = NSMutableURLRequest(url: URL(string: "http://bmtechsol.com:8080/easytox/api/login")!)
+        req.httpBody = encodeJSON(dict )
         
-        req.HTTPMethod  = "POST"
-        req.setValue("Basic \(authData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength))", forHTTPHeaderField: "Authorization")
+        req.httpMethod  = "POST"
+        req.setValue("Basic \(authData?.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters))", forHTTPHeaderField: "Authorization")
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
         self.showProgressView("Logging In")
         weak var weakself = self
         
-        ser.doServiceRequest(req, failure: { (error) in
-            dispatch_sync(dispatch_get_main_queue(), {
-                weakself?.errorLabel.hidden = false
+        ser.doServiceRequest(req as URLRequest, failure: { (error) in
+            DispatchQueue.main.sync(execute: {
+                weakself?.errorLabel.isHidden = false
                 weakself?.errorLabel.text = "Invalid Credentials!"
                 weakself?.hideProgressView()
             })
             }, success: { (data) in
-                dispatch_sync(dispatch_get_main_queue(), {
+                DispatchQueue.main.sync(execute: {
                     weakself?.hideProgressView()
-                    weakself?.errorLabel.hidden = true
-                    weakself?.dismissViewControllerAnimated(true, completion: nil)
+                    weakself?.errorLabel.isHidden = true
+                    weakself?.dismiss(animated: true, completion: nil)
                     weakself?.parseData(data!)
                     weakself?.delegate?.onLogin()
                 })
             })
     }
     
-    func parseData(data:NSDictionary){
+    func parseData(_ data:NSDictionary){
         
-        if let jsonData = data.valueForKey("jsonData") {
-            if let token = jsonData.valueForKey("access_token"){
-                let defaults = NSUserDefaults.standardUserDefaults()
+        if let jsonData = data.value(forKey: "jsonData") {
+            if let token = (jsonData as AnyObject).value(forKey: "access_token"){
+                let defaults = UserDefaults.standard
                 defaults.setValue(token, forKey: "EX-Token")
                 defaults.synchronize()
             }

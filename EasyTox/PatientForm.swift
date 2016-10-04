@@ -13,7 +13,7 @@ class PatientForm:NSObject{
     var middleName:String = ""
     var lastName:String = ""
     var gender:String = ""
-    var birthDate:NSDate?
+    var birthDate:Date?
     var ssn:String = ""
     var address1:String = ""
     var address2:String = ""

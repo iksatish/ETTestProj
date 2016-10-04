@@ -10,34 +10,34 @@ import Foundation
 import UIKit
 
 enum FieldType : Int{
-    case TXTFIELD
-    case LABEL
-    case DROPDOWN
-    case DROPDOWNREADABLE
+    case txtfield
+    case label
+    case dropdown
+    case dropdownreadable
 }
 
 extension UITextField{
     
-    func setUpField(type:FieldType){
+    func setUpField(_ type:FieldType){
         let imgView = UIImageView(image: UIImage(named: "updown"))
-        imgView.frame = CGRectMake(0, 0, 25, 20)
-        imgView.contentMode = UIViewContentMode.ScaleAspectFit
-        self.rightViewMode = UITextFieldViewMode.Always
+        imgView.frame = CGRect(x: 0, y: 0, width: 25, height: 20)
+        imgView.contentMode = UIViewContentMode.scaleAspectFit
+        self.rightViewMode = UITextFieldViewMode.always
         self.rightView = imgView
         switch type{
-        case .LABEL:
-            self.enabled = false
+        case .label:
+            self.isEnabled = false
             self.rightView = nil
             break
-        case .DROPDOWN:
-            self.enabled = false
-            self.userInteractionEnabled = true
+        case .dropdown:
+            self.isEnabled = false
+            self.isUserInteractionEnabled = true
             break
-        case .DROPDOWNREADABLE:
-            self.enabled = false
+        case .dropdownreadable:
+            self.isEnabled = false
             break
         default:
-            self.enabled = true
+            self.isEnabled = true
             break
         }
     }

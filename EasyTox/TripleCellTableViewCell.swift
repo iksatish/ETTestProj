@@ -27,21 +27,21 @@ class TripleCellTableViewCell: UITableViewCell {
         self.firstErrorLabel.text = ""
         self.secondErrorLabel.text = ""
         self.thirdErrorLabel.text = ""
-        self.firstView.hidden = false
-        self.secondView.hidden = false
-        self.thridView.hidden = false
+        self.firstView.isHidden = false
+        self.secondView.isHidden = false
+        self.thridView.isHidden = false
         self.labelHeightConstraint.constant = 21
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func setupFieldForPatientInput(indexPath:NSIndexPath, forCell:Int){
+    func setupFieldForPatientInput(_ indexPath:IndexPath, forCell:Int){
         if forCell == 0{
-            switch indexPath.row{
+            switch (indexPath as NSIndexPath).row{
             case 0:
                 self.headerLabel.text = "Name"
                 self.firstInputField.placeholder = "First Name"
@@ -56,7 +56,7 @@ class TripleCellTableViewCell: UITableViewCell {
                 self.headerLabel.text = ""
                 self.firstInputField.placeholder = "State"
                 self.secondInputField.placeholder = "Zip Code"
-                self.thridView.hidden = true
+                self.thridView.isHidden = true
             case 5:
                 self.headerLabel.text = "Contact"
                 self.firstInputField.placeholder = "Home Phone"
@@ -74,7 +74,7 @@ class TripleCellTableViewCell: UITableViewCell {
                 self.headerLabel.text = ""
             }
         }else{
-            switch indexPath.row{
+            switch (indexPath as NSIndexPath).row{
             case 0:
                 self.headerLabel.text = "Name"
                 self.firstInputField.placeholder = "First Name"
@@ -89,7 +89,7 @@ class TripleCellTableViewCell: UITableViewCell {
                 self.headerLabel.text = ""
                 self.firstInputField.placeholder = "State"
                 self.secondInputField.placeholder = "Zip Code"
-                self.thridView.hidden = true
+                self.thridView.isHidden = true
             case 7:
                 self.headerLabel.text = "Contact"
                 self.firstInputField.placeholder = "Home Phone"

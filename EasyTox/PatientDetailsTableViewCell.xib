@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,26 +13,22 @@
             <rect key="frame" x="0.0" y="0.0" width="774" height="530"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="774" height="529.5"/>
+                <frame key="frameInset" width="774" height="529"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMY-bq-BkK">
-                        <rect key="frame" x="0.0" y="0.0" width="774" height="40"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient &amp; Clinical Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvd-tz-VYD">
-                                <rect key="frame" x="0.0" y="0.0" width="774" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="updown" translatesAutoresizingMaskIntoConstraints="NO" id="UBB-Ec-HuM">
-                                <rect key="frame" x="749" y="5" width="25" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="3ew-a2-gv7"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28e-hB-XKY">
-                                <rect key="frame" x="0.0" y="0.0" width="774" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="AeZ-nJ-AI9"/>
                                 </constraints>
@@ -46,7 +42,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.69908766778523324" green="0.78845952181208057" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.69908766778523324" green="0.78845952181208057" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="28e-hB-XKY" firstAttribute="leading" secondItem="JMY-bq-BkK" secondAttribute="leading" constant="356" id="1vY-7C-jiY"/>
                             <constraint firstAttribute="height" constant="40" id="4RO-v1-NZm"/>
@@ -69,11 +65,9 @@
                         </variation>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q4-i9-9ax">
-                        <rect key="frame" x="8" y="40" width="758" height="481.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWJ-y6-6td" userLabel="Patient" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="8" y="15" width="742" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="WYp-nb-nKA"/>
                                 </constraints>
@@ -88,8 +82,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-06-Lv9" userLabel="Case#" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="8" y="108" width="367" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="fmF-5p-bVo"/>
                                 </constraints>
@@ -104,8 +97,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNk-7S-0bi" userLabel="collected" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="8" y="201" width="367" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="n4n-WJ-2RW"/>
                                 </constraints>
@@ -121,8 +113,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1C-Dv-ggG" userLabel="ctype" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="8" y="294" width="367" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="IlE-u9-S9D"/>
                                 </constraints>
@@ -137,8 +128,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIm-Kj-EUP" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="383" y="294" width="366.5" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="1T2-5z-aK5"/>
                                 </constraints>
@@ -154,8 +144,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-cO-r62" userLabel="record" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="383" y="108" width="366.5" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="dms-Gr-46z"/>
                                 </constraints>
@@ -170,8 +159,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9x-Xs-ti1" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="383" y="201" width="366.5" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="di2-Y1-odp"/>
                                 </constraints>
@@ -187,8 +175,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-Hp-Q4W" userLabel="medicine" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                                <rect key="frame" x="8" y="387" width="367" height="85"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="uLu-tK-UAr"/>
                                 </constraints>
@@ -203,7 +190,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dIm-Kj-EUP" firstAttribute="leading" secondItem="I9x-Xs-ti1" secondAttribute="leading" id="0rh-5O-gzf"/>
                             <constraint firstItem="I9x-Xs-ti1" firstAttribute="leading" secondItem="9Xh-cO-r62" secondAttribute="leading" id="2rW-NE-Uzg"/>
@@ -245,7 +232,7 @@
                         </variation>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="1" green="0.98483073675980859" blue="0.86604614641708366" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="1" green="0.98483073675980859" blue="0.86604614641708366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="7q4-i9-9ax" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7U0-Qv-Cde"/>
                     <constraint firstItem="JMY-bq-BkK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Eiy-V0-WFV"/>

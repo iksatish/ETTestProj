@@ -9,16 +9,16 @@
 import UIKit
 
 enum PickerViewType:Int{
-    case Patient
-    case CaseType
-    case Physician
-    case CompoundProfile
-    case Pathologist
-    case InsuranceType
+    case patient
+    case caseType
+    case physician
+    case compoundProfile
+    case pathologist
+    case insuranceType
 }
 
 protocol PickerViewCallBackDelegate{
-    func updateFormWithPickerSelection(value:String, forType:PickerViewType)
+    func updateFormWithPickerSelection(_ value:String, forType:PickerViewType)
 }
 
 class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -26,29 +26,29 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var pickerViewTitle: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     var pickerData:NSMutableArray = []
-    var pickerViewType:PickerViewType = .Patient
+    var pickerViewType:PickerViewType = .patient
     var currentField:UITextField?
     var delegate:PickerViewCallBackDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         switch pickerViewType{
-        case .Patient:
+        case .patient:
             self.getPatients()
             self.pickerViewTitle.text = "Select Patient"
             break
-        case .CaseType:
+        case .caseType:
             self.pickerData = ["Urine", "Oral"]
             self.pickerViewTitle.text = "Select Case Type"
             break
-        case .Physician:
+        case .physician:
             self.pickerData = ["Physician 1", "Physician 2", "Physician 3", "Physician 4", "Physician 5"]
             self.pickerViewTitle.text = "Select Physician"
             break
-        case .CompoundProfile:
+        case .compoundProfile:
             self.pickerData = ["Profile 1", "Profile 2"]
             self.pickerViewTitle.text = "Select Profile"
             break
-        case .Pathologist:
+        case .pathologist:
             self.pickerData = ["Pathologist 1", "Pathologist 2"]
             self.pickerViewTitle.text = "Select Pathlogist"
             break
@@ -64,16 +64,16 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("dismissPickerView:"))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PickerViewController.dismissPickerView(_:)))
         self.view.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @IBAction func closePickerView(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func closePickerView(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    func dismissPickerView(sender:UIGestureRecognizer){
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func dismissPickerView(_ sender:UIGestureRecognizer){
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
@@ -85,19 +85,19 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     */
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row] as? String
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.currentField?.text = self.pickerData[row] as? String
 //        self.delegate?.updateFormWithPickerSelection(self.pickerData[row] as! String, forType: self.pickerViewType)
     }
@@ -105,7 +105,7 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func getPatients(){
         let patients = coredatahandler.fetchPatientDetails() as [PatientDetails]
         for patient in patients{
-            self.pickerData.addObject("\(patient.firstName!) \(patient.lastName!)")
+            self.pickerData.add("\(patient.firstName!) \(patient.lastName!)")
         }
     }
 }

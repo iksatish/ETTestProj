@@ -13,8 +13,8 @@ class CaseForm:NSObject{
     var caseOrderId:NSInteger?
     var caseNo:NSString?
     var caseAccession:NSString?
-    var dateReceived:NSDate?
-    var dateCollected:NSDate?
+    var dateReceived:Date?
+    var dateCollected:Date?
     var primaryPhysician:Physician?
     var secondaryPhysician:Physician?
     var ccPhysician:Physician?
@@ -24,10 +24,10 @@ class CaseForm:NSObject{
     var cancelCaseReason:NSString?
     var pathologistID:NSString?
     var insuranceType:NSString?
-    var injuryDate:NSDate?
+    var injuryDate:Date?
     var claimNo:NSString?
     var statusFlag:NSString?
-    var finalizedDate:NSDate?
+    var finalizedDate:Date?
 }
 
 class Physician:NSObject{
@@ -38,9 +38,9 @@ class Physician:NSObject{
     var upin_num:NSString?
     var state_license:NSString?
     var created_by:NSString?
-    var created_date:NSDate?
+    var created_date:Date?
     var modified_by:NSString?
-    var modified_date:NSDate?
+    var modified_date:Date?
     var user:UserObject?
 }
 
@@ -53,15 +53,15 @@ class UserObject:NSObject{
     var userType:NSString?
     var contact:NSString?
     var createdBy:NSString?
-    var createdDate:NSDate?
+    var createdDate:Date?
     var modifiedBy:NSString?
-    var modifiedDate:NSDate?
+    var modifiedDate:Date?
     
 }
 
 class CaseFormSimplified:NSObject{
     var caseAccession:NSString = ""
-    var dateCollected:NSDate = NSDate()
+    var dateCollected:Date = Date()
     var firstName:NSString = ""
     var lastName:NSString = ""
     var dob:NSString = ""

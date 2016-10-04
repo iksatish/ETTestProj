@@ -19,15 +19,15 @@ class LegacyInputTableViewCell: UITableViewCell {
         self.errorLabel.text = ""
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func setupFieldForPatientInput(indexPath:NSIndexPath, forCell:Int){
+    func setupFieldForPatientInput(_ indexPath:IndexPath, forCell:Int){
         if forCell == 0{
-            switch indexPath.row{
+            switch (indexPath as NSIndexPath).row{
             case 2:
                 self.headerLabel.text = "SSN"
                 self.inputField.placeholder = "SSN"
@@ -44,18 +44,18 @@ class LegacyInputTableViewCell: UITableViewCell {
                 self.headerLabel.text = ""
             }
         }else{
-            switch indexPath.row{
+            switch (indexPath as NSIndexPath).row{
             case 1:
                 self.headerLabel.text = "Relaton"
                 self.inputField.text = "Select One"
-                self.inputField.setUpField(.DROPDOWN)
+                self.inputField.setUpField(.dropdown)
             case 3:
                 self.headerLabel.text = "SSN"
                 self.inputField.placeholder = "SSN"
             case 4:
                 self.headerLabel.text = "Marital Status"
                 self.inputField.placeholder = "Select One"
-                self.inputField.setUpField(.DROPDOWN)
+                self.inputField.setUpField(.dropdown)
             default:
                 self.headerLabel.text = ""
             }

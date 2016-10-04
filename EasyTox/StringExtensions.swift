@@ -10,12 +10,12 @@ import Foundation
 
 extension String{
     var parseJSONString: AnyObject?  {
-        let data = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        let data = self.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
         if let jsonData = data {
             // Will return an object or nil if JSON decoding fails
             do{
-                return try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers)
+                return try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableContainers) as? AnyObject
             }catch{
                 return nil
             }
@@ -32,8 +32,8 @@ extension String{
         return newString
     }
     
-    func replace(string:String, replacement:String) -> String {
-        return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)
+    func replace(_ string:String, replacement:String) -> String {
+        return self.replacingOccurrences(of: string, with: replacement, options: NSString.CompareOptions.literal, range: nil)
     }
 
 }

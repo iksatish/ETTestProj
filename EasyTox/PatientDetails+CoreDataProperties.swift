@@ -14,7 +14,7 @@ import CoreData
 
 extension PatientDetails {
 
-    @NSManaged var birthDate: NSDate?
+    @NSManaged var birthDate: Date?
     @NSManaged var firstName: String?
     @NSManaged var lastName: String?
 //    @NSManaged var reports: ReportDetails?

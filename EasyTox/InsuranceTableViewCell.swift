@@ -14,18 +14,18 @@ class InsuranceTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.layer.masksToBounds = true
-        self.layer.borderColor = UIColor.grayColor().CGColor
+        self.layer.borderColor = UIColor.gray.cgColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 5.0
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    @IBAction func closeThisCell(sender: UIButton) {
+    @IBAction func closeThisCell(_ sender: UIButton) {
         
     }
 }

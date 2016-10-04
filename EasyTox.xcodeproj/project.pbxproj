@@ -27,6 +27,11 @@
 		22654D4F1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */; };
 		22654D521C97E35F00E6EBE8 /* PhysicistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */; };
 		22654D531C97E35F00E6EBE8 /* PhysicistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */; };
+		2267EDFD1D374F50001FBC0D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267EDFC1D374F50001FBC0D /* UIViewControllerExtension.swift */; };
+		2267EE0A1D374FF5001FBC0D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267EE091D374FF5001FBC0D /* MBProgressHUD.m */; };
+		2267EE0B1D3750A0001FBC0D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267EDFC1D374F50001FBC0D /* UIViewControllerExtension.swift */; };
+		2267EE0C1D376BC6001FBC0D /* CaseForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC427A1C9E9CE400745EFD /* CaseForm.swift */; };
+		2267EE0D1D376D29001FBC0D /* CaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612EE1C9F1A6C002A1442 /* CaseListViewController.swift */; };
 		228612C71C9EDECA002A1442 /* ButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612C51C9EDECA002A1442 /* ButtonsTableViewCell.swift */; };
 		228612C81C9EDECA002A1442 /* ButtonsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228612C61C9EDECA002A1442 /* ButtonsTableViewCell.xib */; };
 		228612CB1C9EE218002A1442 /* InsuranceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612C91C9EE218002A1442 /* InsuranceTableViewCell.swift */; };
@@ -52,14 +57,17 @@
 		228C592A1C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */; };
 		228C592B1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */; };
 		228C592C1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */; };
-		228C592D1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */; };
-		228C592E1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */; };
 		228C593D1C8E7E5F0064C374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248C9CB1C78B17D008067D0 /* Main.storyboard */; };
-		228C593F1C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */; };
-		228C59401C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */; };
 		228C59421C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */; };
 		228C59431C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */; };
 		228C59461C8EA6860064C374 /* PatientDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C59451C8EA6860064C374 /* PatientDetailsView.xib */; };
+		2295D3AE1CE182A6007C3E8B /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295D3AD1CE182A6007C3E8B /* NetworkConnection.swift */; };
+		2295D3AF1CE182A6007C3E8B /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295D3AD1CE182A6007C3E8B /* NetworkConnection.swift */; };
+		2295D3CA1CE1C4F6007C3E8B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295D3C91CE1C4F6007C3E8B /* StringExtensions.swift */; };
+		2295D3CB1CE1C4F6007C3E8B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295D3C91CE1C4F6007C3E8B /* StringExtensions.swift */; };
+		2295D3CE1CE476DE007C3E8B /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295D3CD1CE476DE007C3E8B /* UserSession.swift */; };
+		22B2D6001D50562B00DB361D /* SortByTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B2D5FF1D50562B00DB361D /* SortByTableViewController.swift */; };
+		22B2D6011D5059D400DB361D /* SortByTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B2D5FF1D50562B00DB361D /* SortByTableViewController.swift */; };
 		22E10EFC1C8EABEE00CB0356 /* CustomTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */; };
 		22E10EFE1C8EADF100CB0356 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */; };
 		22FC42721C9E6AB200745EFD /* HeaderCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC42701C9E6AB200745EFD /* HeaderCellTableViewCell.swift */; };
@@ -110,13 +118,16 @@
 		22654D4D1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicistTableViewCell.swift; sourceTree = "<group>"; };
 		22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicistTableViewCell.xib; sourceTree = "<group>"; };
+		2267EDFB1D374EF2001FBC0D /* Swift-Bridge-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Swift-Bridge-header.h"; path = "../Swift-Bridge-header.h"; sourceTree = "<group>"; };
+		2267EDFC1D374F50001FBC0D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		2267EE081D374FF5001FBC0D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../../repo/EasyTox/EasyTox/MBProgressHUD.h; sourceTree = "<group>"; };
+		2267EE091D374FF5001FBC0D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../../repo/EasyTox/EasyTox/MBProgressHUD.m; sourceTree = "<group>"; };
 		228612C51C9EDECA002A1442 /* ButtonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		228612C61C9EDECA002A1442 /* ButtonsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		228612C91C9EE218002A1442 /* InsuranceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceTableViewCell.swift; sourceTree = "<group>"; };
 		228612CA1C9EE218002A1442 /* InsuranceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsuranceTableViewCell.xib; sourceTree = "<group>"; };
 		228612CD1C9F0403002A1442 /* PatientForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientForm.swift; sourceTree = "<group>"; };
 		228612CF1C9F05ED002A1442 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
-		228612D11C9F0854002A1442 /* EasyTox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyTox-Bridging-Header.h"; sourceTree = "<group>"; };
 		228612E41C9F08C1002A1442 /* PatientDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PatientDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		228612E51C9F08C1002A1442 /* PatientDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDetails.swift; sourceTree = "<group>"; };
 		228612EA1C9F1169002A1442 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -127,10 +138,12 @@
 		228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCollectionViewCell.xib; sourceTree = "<group>"; };
-		228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
-		228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewViewController.swift; sourceTree = "<group>"; };
 		228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		228C59451C8EA6860064C374 /* PatientDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailsView.xib; sourceTree = "<group>"; };
+		2295D3AD1CE182A6007C3E8B /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkConnection.swift; path = NetworkResources/NetworkConnection.swift; sourceTree = "<group>"; };
+		2295D3C91CE1C4F6007C3E8B /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		2295D3CD1CE476DE007C3E8B /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		22B2D5FF1D50562B00DB361D /* SortByTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortByTableViewController.swift; sourceTree = "<group>"; };
 		22E10EFB1C8EABEE00CB0356 /* CustomTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTextFieldView.xib; sourceTree = "<group>"; };
 		22E10EFD1C8EADF100CB0356 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		22FC42701C9E6AB200745EFD /* HeaderCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -185,25 +198,29 @@
 		2248C9C61C78B17D008067D0 /* EasyTox */ = {
 			isa = PBXGroup;
 			children = (
+				2295D3C81CE1C4E2007C3E8B /* Extensions */,
+				2295D3AC1CE1826E007C3E8B /* NetworkResources */,
+				2295D3CC1CE476B9007C3E8B /* UserSession */,
 				228C59161C8CBC3A0064C374 /* CustomCollectionLayout */,
 				2248C9C71C78B17D008067D0 /* AppDelegate.swift */,
 				228C59441C8EA6470064C374 /* Custom Views */,
 				228C59101C8B55F80064C374 /* GlobalConstants.swift */,
 				2248C9C91C78B17D008067D0 /* ViewController.swift */,
-				228C593E1C8E85CA0064C374 /* HomeCollectionViewViewController.swift */,
 				22FC428B1C9EC6ED00745EFD /* NewPatientViewController.swift */,
 				22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */,
 				228612EE1C9F1A6C002A1442 /* CaseListViewController.swift */,
+				22FBA1961D3C85C900D2EE9A /* ServiceProviders */,
 				2229E87B1C9DFEB0002D34E2 /* PickerViewController.swift */,
 				2248C9CB1C78B17D008067D0 /* Main.storyboard */,
+				22B2D5FF1D50562B00DB361D /* SortByTableViewController.swift */,
 				2248C9D11C78B17D008067D0 /* Assets.xcassets */,
 				2248C9D31C78B17D008067D0 /* LaunchScreen.storyboard */,
 				2248C9D61C78B17D008067D0 /* Info.plist */,
 				2248C9CE1C78B17D008067D0 /* EasyTox.xcdatamodeld */,
 				228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */,
+				228612F51CA0E2AA002A1442 /* MBProgressHUD */,
 				22FC42791C9E9CCB00745EFD /* classes */,
 				22FC42761C9E8CD100745EFD /* Extensions */,
-				228612D11C9F0854002A1442 /* EasyTox-Bridging-Header.h */,
 			);
 			path = EasyTox;
 			sourceTree = "<group>";
@@ -251,6 +268,16 @@
 			name = Reusables;
 			sourceTree = "<group>";
 		};
+		228612F51CA0E2AA002A1442 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2267EE081D374FF5001FBC0D /* MBProgressHUD.h */,
+				2267EE091D374FF5001FBC0D /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = ../../../MBProgressHUD/MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		228C59161C8CBC3A0064C374 /* CustomCollectionLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +318,6 @@
 		228C591F1C8CBC600064C374 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				228C591E1C8CBC600064C374 /* CustomCollectionViewLayout.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -316,11 +342,44 @@
 		228C59441C8EA6470064C374 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				2267EDFB1D374EF2001FBC0D /* Swift-Bridge-header.h */,
 				22654D431C8EBABF00E6EBE8 /* Reusables */,
 				228C59451C8EA6860064C374 /* PatientDetailsView.xib */,
 				22654D441C8EBAE500E6EBE8 /* PhysicistAssignmentDetails.xib */,
 			);
 			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		2295D3AC1CE1826E007C3E8B /* NetworkResources */ = {
+			isa = PBXGroup;
+			children = (
+				2295D3AD1CE182A6007C3E8B /* NetworkConnection.swift */,
+			);
+			name = NetworkResources;
+			sourceTree = "<group>";
+		};
+		2295D3C81CE1C4E2007C3E8B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2295D3C91CE1C4F6007C3E8B /* StringExtensions.swift */,
+				2267EDFC1D374F50001FBC0D /* UIViewControllerExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		2295D3CC1CE476B9007C3E8B /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				2295D3CD1CE476DE007C3E8B /* UserSession.swift */,
+			);
+			name = UserSession;
+			sourceTree = "<group>";
+		};
+		22FBA1961D3C85C900D2EE9A /* ServiceProviders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ServiceProviders;
 			sourceTree = "<group>";
 		};
 		22FC42761C9E8CD100745EFD /* Extensions */ = {
@@ -395,14 +454,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Satish Kumar R Kancherla";
 				TargetAttributes = {
 					2248C9C31C78B17D008067D0 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					2248C9DA1C78B17D008067D0 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 2248C9C31C78B17D008067D0;
 					};
 				};
@@ -480,7 +541,6 @@
 				2248C9D01C78B17D008067D0 /* EasyTox.xcdatamodeld in Sources */,
 				2248C9CA1C78B17D008067D0 /* ViewController.swift in Sources */,
 				22E10EFE1C8EADF100CB0356 /* CustomTextFieldView.swift in Sources */,
-				228C593F1C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */,
 				228612CB1C9EE218002A1442 /* InsuranceTableViewCell.swift in Sources */,
 				228C59111C8B55F80064C374 /* GlobalConstants.swift in Sources */,
 				22FC42891C9EC5EB00745EFD /* DobAgeTableViewCell.swift in Sources */,
@@ -489,18 +549,23 @@
 				2248C9C81C78B17D008067D0 /* AppDelegate.swift in Sources */,
 				228612E61C9F08C1002A1442 /* PatientDetails+CoreDataProperties.swift in Sources */,
 				22FC427B1C9E9CE400745EFD /* CaseForm.swift in Sources */,
+				22B2D6001D50562B00DB361D /* SortByTableViewController.swift in Sources */,
 				228612CE1C9F0403002A1442 /* PatientForm.swift in Sources */,
 				228612E71C9F08C1002A1442 /* PatientDetails.swift in Sources */,
+				2267EDFD1D374F50001FBC0D /* UIViewControllerExtension.swift in Sources */,
 				228C59291C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */,
+				2267EE0A1D374FF5001FBC0D /* MBProgressHUD.m in Sources */,
 				228612EC1C9F1169002A1442 /* ListTableViewCell.swift in Sources */,
 				22FC428C1C9EC6ED00745EFD /* NewPatientViewController.swift in Sources */,
+				2295D3AE1CE182A6007C3E8B /* NetworkConnection.swift in Sources */,
 				22FC428F1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift in Sources */,
 				228C59251C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */,
 				228612D01C9F05ED002A1442 /* CoreDataHandler.swift in Sources */,
+				2295D3CA1CE1C4F6007C3E8B /* StringExtensions.swift in Sources */,
 				22FC42721C9E6AB200745EFD /* HeaderCellTableViewCell.swift in Sources */,
 				2229E87F1C9E0A62002D34E2 /* PatientInfoTableViewCell.swift in Sources */,
 				22FC42851C9EC55400745EFD /* TripleCellTableViewCell.swift in Sources */,
-				228C592D1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */,
+				2295D3CE1CE476DE007C3E8B /* UserSession.swift in Sources */,
 				228612C71C9EDECA002A1442 /* ButtonsTableViewCell.swift in Sources */,
 				22654D4B1C97B98100E6EBE8 /* AddNewCaseViewController.swift in Sources */,
 			);
@@ -514,13 +579,17 @@
 				228612E81C9F0E92002A1442 /* CoreDataHandler.swift in Sources */,
 				228612E91C9F0FD2002A1442 /* PatientDetails.swift in Sources */,
 				228C59131C8B56000064C374 /* AppDelegate.swift in Sources */,
+				22B2D6011D5059D400DB361D /* SortByTableViewController.swift in Sources */,
 				228C59121C8B55F80064C374 /* GlobalConstants.swift in Sources */,
-				228C59401C8E85CA0064C374 /* HomeCollectionViewViewController.swift in Sources */,
 				228C59141C8B56030064C374 /* ViewController.swift in Sources */,
 				2248C9E01C78B17D008067D0 /* EasyToxTests.swift in Sources */,
+				2267EE0C1D376BC6001FBC0D /* CaseForm.swift in Sources */,
+				2295D3AF1CE182A6007C3E8B /* NetworkConnection.swift in Sources */,
 				228C592A1C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */,
 				228C59261C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */,
-				228C592E1C8CBC600064C374 /* CustomCollectionViewLayout.swift in Sources */,
+				2267EE0B1D3750A0001FBC0D /* UIViewControllerExtension.swift in Sources */,
+				2267EE0D1D376D29001FBC0D /* CaseListViewController.swift in Sources */,
+				2295D3CB1CE1C4F6007C3E8B /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,8 +636,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -612,8 +683,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -632,6 +705,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -643,11 +717,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyTox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyTox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "EasyTox/EasyTox-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-Bridge-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -658,10 +734,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyTox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyTox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "EasyTox/EasyTox-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-Bridge-header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -670,10 +748,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyToxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyToxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyTox/EasyToxTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyTox.app/EasyTox";
 			};
 			name = Debug;
@@ -682,10 +764,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyToxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmtechsol.EasyToxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyTox/EasyToxTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyTox.app/EasyTox";
 			};
 			name = Release;

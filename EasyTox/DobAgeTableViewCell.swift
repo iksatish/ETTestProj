@@ -23,10 +23,10 @@ class DobAgeTableViewCell: UITableViewCell {
     @IBOutlet weak var secondErrorLabel: UILabel!
     @IBOutlet weak var secondInputField: UITextField!
     @IBOutlet weak var ageInputFIeld: UITextField!
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        self.firstInputField.setUpField(.DROPDOWN)
-        self.secondInputField.setUpField(.LABEL)
+        self.firstInputField.setUpField(.dropdown)
+        self.secondInputField.setUpField(.label)
         // Configure the view for the selected state
     }
     

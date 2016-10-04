@@ -22,50 +22,50 @@ public struct Resource<T>  {
 }
 
 public enum FailureReason {
-    case CouldNotParseJSON
-    case NoData
-    case NoSuccessStatusCode(statusCode: Int)
-    case Other(NSError)
+    case couldNotParseJSON
+    case noData
+    case noSuccessStatusCode(statusCode: Int)
+    case other(NSError)
 }
 
 
-class ServiceRequest:NSObject, NSURLSessionDelegate{
-    func doServiceRequest(request:NSURLRequest, failure: (NSDictionary?)->(), success:(NSDictionary?)->()){
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
+class ServiceRequest:NSObject, URLSessionDelegate{
+    func doServiceRequest(_ request:URLRequest, failure: @escaping (NSDictionary?)->(), success:@escaping (NSDictionary?)->()){
+            let task = Foundation.URLSession.shared.dataTask(with: request, completionHandler: {
             (data, response, error) -> Void in
-            if let httpResponse = response as? NSHTTPURLResponse {
+            if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 ||
                     httpResponse.statusCode == 201  {
-                    success(decodeJSON(data!))
+                    success(decodeJSON(data!) as NSDictionary?)
                 }else if httpResponse.statusCode == 401{
                     failure(["loginStatus":"failed"])
                 }
                 else {
-                    failure(decodeJSON(data!))
+                    failure(decodeJSON(data!) as NSDictionary?)
                 }
             }
             else {
-                failure(decodeJSON(data!))
+                failure(decodeJSON(data!) as NSDictionary?)
             }
             
-        }
+        })
         task.resume()
         
     }
     
-    func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
-        completionHandler(NSURLSessionAuthChallengeDisposition.PerformDefaultHandling, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
+    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        completionHandler(Foundation.URLSession.AuthChallengeDisposition.performDefaultHandling, URLCredential(trust: challenge.protectionSpace.serverTrust!))
         
     }
 }
 public typealias JSONDictionary = [String:AnyObject]
 
-func decodeJSON(data: NSData) -> JSONDictionary {
+func decodeJSON(_ data: Data) -> JSONDictionary {
     
     do{
-        let jsonObj = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+        let jsonObj = try JSONSerialization.jsonObject(with: data, options: [])
         let decodedJsonObj = ["jsonData" : jsonObj]
-        return decodedJsonObj
+        return decodedJsonObj as JSONDictionary
     }catch{
         
     }
@@ -73,9 +73,9 @@ func decodeJSON(data: NSData) -> JSONDictionary {
     return [:]
 }
 
-func encodeJSON(dict: NSMutableDictionary) -> NSData? {
+func encodeJSON(_ dict: NSMutableDictionary) -> Data? {
     do{
-        return try dict.count > 0 ? NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions()) : nil
+        return try dict.count > 0 ? JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions()) : nil
     }catch{}
     return nil
 }

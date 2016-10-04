@@ -17,9 +17,9 @@ let patientInfoCellIdentifier = "patientInfoCellIdentifier"
 // CornerRadius & shadow
 let kGlobalCornerRadius:CGFloat = 3.5
 let kProgressMeterConrnerRadius:CGFloat = 6
-let kGlobalShadowColor:CGColor = UIColor.lightGrayColor().CGColor
+let kGlobalShadowColor:CGColor = UIColor.lightGray.cgColor
 let kGlobalShadowRadius:CGFloat = 0.5
-let kGlobalShadowOffset:CGSize = CGSizeMake(0.5, 1)
+let kGlobalShadowOffset:CGSize = CGSize(width: 0.5, height: 1)
 let kGlobalShadowOpacity:Float = 0.5
 let patientFormIdentifier = "patient"
 let physicianFormIdentifier = "physician"
@@ -28,37 +28,38 @@ let dobAgeCellIdentifier = "dobAgeCellIdentifier"
 let legacyCellIdentifier = "legacyCellIdentifier"
 let insuranceCellIdentifier = "insuranceCellIdentifier"
 let insButtonsCellIdentifier = "insButtonsCellIdentifier"
+let kFetchListNotification = "FetchCaseListNotification"
 
 let coredatahandler = CoreDatahandler()
 
 class Util:NSObject{
-    class func dateFor(timeStamp: String) -> NSDate
+    class func dateFor(_ timeStamp: String) -> Date
     {
         //Create Date Formatter
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         
         //Specify Format of String to Parse
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         
         //Parse into NSDate
-        let dateFromString : NSDate = dateFormatter.dateFromString(timeStamp)!
+        let dateFromString : Date = dateFormatter.date(from: timeStamp)!
         
         //Return Parsed Date
         return dateFromString
     }
-    class func dateFors(timeStamp: String) -> NSDate
+    class func dateFors(_ timeStamp: String) -> Date
     {
-        let formater = NSDateFormatter()
+        let formater = DateFormatter()
         formater.dateFormat = "HH:mm:ss:SSS - MMM dd, yyyy"
-        return formater.dateFromString(timeStamp)!
+        return formater.date(from: timeStamp)!
     }
     
     
-    class func timeStampFor(date: NSDate) -> String
+    class func timeStampFor(_ date: Date) -> String
     {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss:SSS - MMM dd, yyyy"
         
-        return dateFormatter.stringFromDate(date)
+        return dateFormatter.string(from: date)
     }
 }

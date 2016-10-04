@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 class CoreDatahandler:NSObject{
-    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     var managedObjectContext: NSManagedObjectContext? {
         get {
             if let delegate = appDelegate {
@@ -21,8 +21,8 @@ class CoreDatahandler:NSObject{
         }
     }
     
-    func saveNewPatient(patientForm:PatientForm){
-        let patientInfo:PatientDetails =  NSEntityDescription.insertNewObjectForEntityForName("PatientDetails", inManagedObjectContext: managedObjectContext!) as! PatientDetails
+    func saveNewPatient(_ patientForm:PatientForm){
+        let patientInfo:PatientDetails =  NSEntityDescription.insertNewObject(forEntityName: "PatientDetails", into: managedObjectContext!) as! PatientDetails
         patientInfo.firstName = patientForm.firstName
         patientInfo.lastName = patientForm.lastName
         do{
@@ -35,19 +35,19 @@ class CoreDatahandler:NSObject{
     
     
     func fetchPatientDetails() -> [PatientDetails] {
-        let fetchRequest = NSFetchRequest(entityName: "PatientDetails")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PatientDetails")
         _ = NSSortDescriptor(key: "firstName", ascending: true)
         
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "firstName", ascending: true)]
         //TODO: Add error handling
-        var patients = []
+        var patients:[PatientDetails] = []
         do{
-            patients =  try self.managedObjectContext!.executeFetchRequest(fetchRequest) as! [PatientDetails]
+            patients =  try self.managedObjectContext!.fetch(fetchRequest) as! [PatientDetails]
             
         }catch{
             
         }
-        return patients as! [PatientDetails]
+        return patients
     }
 
 

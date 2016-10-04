@@ -10,7 +10,7 @@ import UIKit
 
 @objc
 protocol SingleFieldCellDelegate{
-    optional func openNewPatientView()
+    @objc optional func openNewPatientView()
 }
 class SingleFieldTableViewCell: UITableViewCell {
 
@@ -23,19 +23,19 @@ class SingleFieldTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.addButton.hidden = true
+        self.addButton.isHidden = true
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    @IBAction func onTappingAdd(sender: UIButton) {
+    @IBAction func onTappingAdd(_ sender: UIButton) {
         self.delegate?.openNewPatientView!()
     }
-    @IBAction func selectPatient(sender: UIButton) {
-        self.pickerDelegate?.openPickerViewForField(self.inputField, forPickerType: PickerViewType.Patient)
+    @IBAction func selectPatient(_ sender: UIButton) {
+        self.pickerDelegate?.openPickerViewForField(self.inputField, forPickerType: PickerViewType.patient)
     }
 }

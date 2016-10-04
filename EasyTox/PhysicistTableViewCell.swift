@@ -19,13 +19,13 @@ class PhysicistTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    @IBAction func collapseCell(sender: UIButton) {
+    @IBAction func collapseCell(_ sender: UIButton) {
         self.isCollapsed = !self.isCollapsed
         self.delegate?.collapseThisCell(self.rowNum, isCollapsing: isCollapsed)
     }

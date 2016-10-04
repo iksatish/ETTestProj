@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ButtonsCellDelegate{
-    func updateTableViewWithInsuranceInfo(tag:Int)
+    func updateTableViewWithInsuranceInfo(_ tag:Int)
 }
 class ButtonsTableViewCell: UITableViewCell {
     var delegate:ButtonsCellDelegate?
@@ -17,13 +17,13 @@ class ButtonsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.layer.masksToBounds = true
-        self.layer.borderColor = UIColor.grayColor().CGColor
+        self.layer.borderColor = UIColor.gray.cgColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 5.0
 
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -31,18 +31,19 @@ class ButtonsTableViewCell: UITableViewCell {
     @IBOutlet weak var firstButton: UIButton!
     @IBOutlet weak var secondButton: UIButton!
     
-    @IBAction func onTappingButton(sender: UIButton) {
+    @IBAction func onTappingButton(_ sender: UIButton) {
         self.delegate?.updateTableViewWithInsuranceInfo(sender.tag)
-        if sender == 1{
+        if sender.tag == 1{
             
         }else{
             
         }
     }
     
-    func updateButtonsTitle(var titleTag:Int, isworksmanCellAdded:Bool){
+    func updateButtonsTitle(_ titleTag:Int, isworksmanCellAdded:Bool){
+        var titleTag = titleTag
         if isworksmanCellAdded {
-            titleTag++
+            titleTag += 1
         }
         var title = "Add Primary"
             switch titleTag{
@@ -53,6 +54,6 @@ class ButtonsTableViewCell: UITableViewCell {
             default:
                 title = "Add Primary"
             }
-        self.secondButton.setTitle(title, forState: UIControlState.Normal)
+        self.secondButton.setTitle(title, for: UIControlState())
     }
 }

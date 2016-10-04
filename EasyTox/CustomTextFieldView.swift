@@ -8,10 +8,10 @@
 
 import UIKit
 enum ViewType : Int{
-    case TXTFIELD
-    case LABEL
-    case DROPDOWN
-    case DROPDOWNREADABLE
+    case txtfield
+    case label
+    case dropdown
+    case dropdownreadable
 }
 
 @IBDesignable class CustomTextFieldView: UIView {
@@ -21,7 +21,7 @@ enum ViewType : Int{
     
     @IBOutlet weak var curTextField: UITextField!
     var controlTitle:String = ""
-    var currentViewType:ViewType = ViewType.TXTFIELD
+    var currentViewType:ViewType = ViewType.txtfield
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -39,16 +39,16 @@ enum ViewType : Int{
         view.frame = bounds
         
         // Make the view stretch with containing view
-        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+        view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(view)
     }
     
     func loadViewFromNib() -> UIView {
         
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "CustomTextFieldView", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
     }
@@ -91,8 +91,8 @@ enum ViewType : Int{
         didSet{
             switch type{
             case 1:
-                self.currentViewType = ViewType.LABEL
-                self.curTextField.enabled = false
+                self.currentViewType = ViewType.label
+                self.curTextField.isEnabled = false
                 break
             case 2:
                 self.setupDropDownField(true)
@@ -101,20 +101,20 @@ enum ViewType : Int{
                 self.setupDropDownField(false)
                 break
             default:
-                self.currentViewType = ViewType.TXTFIELD
+                self.currentViewType = ViewType.txtfield
             }
         }
     }
     
-    func setupDropDownField(isReadable:Bool){
-        self.currentViewType = ViewType.DROPDOWN
+    func setupDropDownField(_ isReadable:Bool){
+        self.currentViewType = ViewType.dropdown
         let imgView = UIImageView(image: UIImage(named: "updown"))
-        imgView.frame = CGRectMake(0, 0, 25, 20)
-        imgView.contentMode = UIViewContentMode.ScaleAspectFit
-        self.curTextField.rightViewMode = UITextFieldViewMode.Always
+        imgView.frame = CGRect(x: 0, y: 0, width: 25, height: 20)
+        imgView.contentMode = UIViewContentMode.scaleAspectFit
+        self.curTextField.rightViewMode = UITextFieldViewMode.always
         self.curTextField.rightView = imgView
-        self.curTextField.enabled = false
-        self.curTextField.userInteractionEnabled = isReadable
+        self.curTextField.isEnabled = false
+        self.curTextField.isUserInteractionEnabled = isReadable
 //        if (isReadable){
 //            let tapRecognizer = UITapGestureRecognizer(target: self, action: <#T##Selector#>)
 //        }

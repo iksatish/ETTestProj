@@ -16,10 +16,10 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
     var insuranceType:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.registerNib(UINib(nibName: "SingleFieldTableViewCell", bundle: nil), forCellReuseIdentifier: singleCellIdentifier)
-        self.tableView.registerNib(UINib(nibName: "DoubleFieldTableViewCell", bundle: nil), forCellReuseIdentifier: doubleCellIdentifier)
-        self.tableView.registerNib(UINib(nibName: "PatientInfoTableViewCell", bundle: nil), forCellReuseIdentifier: patientInfoCellIdentifier)
-        self.tableView.registerNib(UINib(nibName: "HeaderCellTableViewCell", bundle: nil), forCellReuseIdentifier: headerCellIdentifier)
+        self.tableView.register(UINib(nibName: "SingleFieldTableViewCell", bundle: nil), forCellReuseIdentifier: singleCellIdentifier)
+        self.tableView.register(UINib(nibName: "DoubleFieldTableViewCell", bundle: nil), forCellReuseIdentifier: doubleCellIdentifier)
+        self.tableView.register(UINib(nibName: "PatientInfoTableViewCell", bundle: nil), forCellReuseIdentifier: patientInfoCellIdentifier)
+        self.tableView.register(UINib(nibName: "HeaderCellTableViewCell", bundle: nil), forCellReuseIdentifier: headerCellIdentifier)
         // Do any additional setup after loading the view.
     }
 
@@ -31,11 +31,11 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
 
     // MARK: Tableview
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section{
         case 1:
             return 6
@@ -51,65 +51,65 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch indexPath.section{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch (indexPath as NSIndexPath).section{
         case 0:
-            let cell:PatientInfoTableViewCell = tableView.dequeueReusableCellWithIdentifier(patientInfoCellIdentifier)! as! PatientInfoTableViewCell
+            let cell:PatientInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: patientInfoCellIdentifier)! as! PatientInfoTableViewCell
             return cell
         case 1:
-            if indexPath.row == 0{
-                let cell:HeaderCellTableViewCell = tableView.dequeueReusableCellWithIdentifier(headerCellIdentifier)! as! HeaderCellTableViewCell
+            if (indexPath as NSIndexPath).row == 0{
+                let cell:HeaderCellTableViewCell = tableView.dequeueReusableCell(withIdentifier: headerCellIdentifier)! as! HeaderCellTableViewCell
                 
                 return cell
-            }else if indexPath.row == 1{
-                let cell:SingleFieldTableViewCell = tableView.dequeueReusableCellWithIdentifier(singleCellIdentifier)! as! SingleFieldTableViewCell
-                cell.addButton.hidden = false
+            }else if (indexPath as NSIndexPath).row == 1{
+                let cell:SingleFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: singleCellIdentifier)! as! SingleFieldTableViewCell
+                cell.addButton.isHidden = false
                 cell.headerLabel.text = "Patient"
                 cell.inputField.text = "Select Patient"
-                cell.inputField.setUpField(FieldType.DROPDOWN)
+                cell.inputField.setUpField(FieldType.dropdown)
                 cell.delegate = self
                 cell.pickerDelegate = self
                 return cell
             }else{
-                let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCellWithIdentifier(doubleCellIdentifier)! as! DoubleFieldTableViewCell
+                let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: doubleCellIdentifier)! as! DoubleFieldTableViewCell
                 cell.setUpCell(indexPath, cellFor: patientFormIdentifier)
                 cell.delegate = self
                 return cell
             }
         case 2:
-            if indexPath.row == 0{
-                let cell:HeaderCellTableViewCell = tableView.dequeueReusableCellWithIdentifier(headerCellIdentifier)! as! HeaderCellTableViewCell
+            if (indexPath as NSIndexPath).row == 0{
+                let cell:HeaderCellTableViewCell = tableView.dequeueReusableCell(withIdentifier: headerCellIdentifier)! as! HeaderCellTableViewCell
                 return cell
             }else{
-                let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCellWithIdentifier(doubleCellIdentifier)! as! DoubleFieldTableViewCell
+                let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: doubleCellIdentifier)! as! DoubleFieldTableViewCell
                 cell.setUpCell(indexPath, cellFor: physicianFormIdentifier)
                 cell.delegate = self
                 return cell
             }
         default:
-            let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("submitCellIdentifier")! as UITableViewCell
+            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "submitCellIdentifier")! as UITableViewCell
             return cell
         }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = UIColor.clearColor()
+        view.backgroundColor = UIColor.clear
         return view
     }
 
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch indexPath.section{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath as NSIndexPath).section{
         case 0:
             return 150
         case 3:
             return 44
         default:
-            if indexPath.row == 0{
+            if (indexPath as NSIndexPath).row == 0{
                 return 45
             }else{
                 return 85
@@ -118,39 +118,39 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     //MARK: Cell Delegate
-    func collapseThisCell(rowNum: Int, isCollapsing:Bool) {
+    func collapseThisCell(_ rowNum: Int, isCollapsing:Bool) {
         if isCollapsing{
-            if self.collapsedRows.indexOf(rowNum) == nil{
+            if self.collapsedRows.index(of: rowNum) == nil{
                 self.collapsedRows.append(rowNum)
             }
         }else{
-            if let temp = self.collapsedRows.indexOf(rowNum){
-                self.collapsedRows.removeAtIndex(temp)
+            if let temp = self.collapsedRows.index(of: rowNum){
+                self.collapsedRows.remove(at: temp)
             }
         }
         self.tableView.reloadData()
 
     }
     
-    func openPickerViewForField(textField: UITextField, forPickerType: PickerViewType) {
-        let vc:PickerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("pickerViewControllerIdentifier") as! PickerViewController
+    func openPickerViewForField(_ textField: UITextField, forPickerType: PickerViewType) {
+        let vc:PickerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pickerViewControllerIdentifier") as! PickerViewController
         vc.pickerViewType = forPickerType
         vc.currentField = textField
         vc.delegate = self
-        self.presentViewController(vc, animated: true, completion: nil)
+        self.present(vc, animated: true, completion: nil)
         
     }
     
-    func updateFormWithPickerSelection(value: String, forType: PickerViewType) {
-        if forType == .InsuranceType{
+    func updateFormWithPickerSelection(_ value: String, forType: PickerViewType) {
+        if forType == .insuranceType{
             self.insuranceType = value
             self.tableView.reloadData()
         }
     }
     
     func openNewPatientView() {
-        let vc:NewPatientViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("newPatientViewControllerIdentifier") as! NewPatientViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let vc:NewPatientViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newPatientViewControllerIdentifier") as! NewPatientViewController
+        self.present(vc, animated: true, completion: nil)
     }
 
 }
