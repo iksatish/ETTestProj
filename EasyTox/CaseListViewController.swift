@@ -48,11 +48,6 @@ class CaseListViewController: BaseViewController, UITableViewDataSource, UITable
     var isFetchInProgress = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaults = UserDefaults.standard
-        if let _ = defaults.object(forKey: "EX-Token"), let tabBar = self.tabBarController as? HomeTabBarViewController, !self.isFetchInProgress{
-            tabBar.fetchAllData()
-        }
-        
         NotificationCenter.default.addObserver(self, selector: #selector(CaseListViewController.fetchCaseList(_:)), name: NSNotification.Name(rawValue: kFetchListNotification), object: nil)
         self.tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier:"listCellIdentifier")
     }

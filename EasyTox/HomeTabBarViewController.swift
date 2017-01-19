@@ -84,6 +84,7 @@ class HomeTabBarViewController: UITabBarController,LoginDelegate, URLSessionDele
     }
     //ServiceCalls To Get Data
     func fetchAllData(){
+        self.showProgressView("Fetching Case List")
         self.getCasesList()
         self.getPatientsList()
         self.getPhysiciansList()
@@ -103,13 +104,9 @@ class HomeTabBarViewController: UITabBarController,LoginDelegate, URLSessionDele
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = "GET"
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
-        self.showProgressView("Fetching Case List")
         let task = session.dataTask(with: request as URLRequest) {
             (
             data,  response, error) in
-            DispatchQueue.main.async {
-                self.hideProgressView()
-            }
             do{
                 if let _ = error
                 {
@@ -152,13 +149,9 @@ class HomeTabBarViewController: UITabBarController,LoginDelegate, URLSessionDele
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = "GET"
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
-        self.showProgressView("Fetching Case List")
         let task = session.dataTask(with: request as URLRequest) {
             (
             data,  response, error) in
-            DispatchQueue.main.async {
-                self.hideProgressView()
-            }
             do{
                 if let _ = error
                 {
@@ -202,13 +195,9 @@ class HomeTabBarViewController: UITabBarController,LoginDelegate, URLSessionDele
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = "GET"
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
-        self.showProgressView("Fetching Case List")
         let task = session.dataTask(with: request as URLRequest) {
             (
             data,  response, error) in
-            DispatchQueue.main.async {
-                self.hideProgressView()
-            }
             do{
                 if let _ = error
                 {
@@ -251,13 +240,9 @@ class HomeTabBarViewController: UITabBarController,LoginDelegate, URLSessionDele
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = "GET"
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
-        self.showProgressView("Fetching Case List")
         let task = session.dataTask(with: request as URLRequest) {
             (
             data,  response, error) in
-            DispatchQueue.main.async {
-                self.hideProgressView()
-            }
             do{
                 if let _ = error
                 {
