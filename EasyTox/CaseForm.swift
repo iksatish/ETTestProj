@@ -37,6 +37,8 @@ class CaseForm:NSObject{
     var lastUpdated: NSString?
     var finalInterpretation:NSString?
     var showOnReport:Bool?
+    var pathologistId: NSInteger?
+    
 }
 
 

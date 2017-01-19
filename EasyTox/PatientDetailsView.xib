@@ -69,7 +69,8 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-s0-c6b" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-s0-c6b" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <frame key="frameInset" width="1000" height="1000"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="BBD-8a-ge5"/>
@@ -85,7 +86,8 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrN-wp-18F" userLabel="record" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrN-wp-18F" userLabel="record" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <frame key="frameInset" width="1000" height="1000"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="M9K-nu-xQq"/>
@@ -100,7 +102,8 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3by-1n-jfM" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3by-1n-jfM" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <frame key="frameInset" width="1000" height="1000"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="LTh-dy-3en"/>

@@ -29,31 +29,35 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var pickerViewType:PickerViewType = .patient
     var currentField:UITextField?
     var delegate:PickerViewCallBackDelegate?
+    var patientsData:[Patient]?
+    var pathologistData:[Pathologist]?
+    var physicianData: [Physician]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let tabBarVC = appDelegate.window?.rootViewController as? HomeTabBarViewController else {return}
+        
         switch pickerViewType{
         case .patient:
-            self.getPatients()
             self.pickerViewTitle.text = "Select Patient"
+            self.patientsData = tabBarVC.patientList
             break
         case .caseType:
-            self.pickerData = ["Urine", "Oral"]
             self.pickerViewTitle.text = "Select Case Type"
             break
         case .physician:
-            self.pickerData = ["Physician 1", "Physician 2", "Physician 3", "Physician 4", "Physician 5"]
             self.pickerViewTitle.text = "Select Physician"
+            self.physicianData = tabBarVC.physiciansList
             break
         case .compoundProfile:
-            self.pickerData = ["Profile 1", "Profile 2"]
             self.pickerViewTitle.text = "Select Profile"
             break
         case .pathologist:
-            self.pickerData = ["Pathologist 1", "Pathologist 2"]
             self.pickerViewTitle.text = "Select Pathlogist"
+            self.pathologistData = tabBarVC.pathologistsList
             break
         default:
-            self.pickerData = ["Primary", "Secondary", "Teritary", "Worksmen", "None"]
             self.pickerViewTitle.text = "Select Insurance Type"
 
             break
@@ -86,6 +90,26 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     */
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerViewType{
+        case .patient:
+            if let data = self.patientsData{
+                return data[row].firstName as String?
+            }
+            break
+        case .physician:
+            if let data = self.physicianData{
+                return data[row].firstName as String?
+            }
+            break
+        case .pathologist:
+            if let data = self.pathologistData{
+                return data[row].firstName as String?
+            }
+            break
+        default:
+            self.pickerViewTitle.text = "Select Insurance Type"
+            break
+        }
         return pickerData[row] as? String
     }
     
@@ -94,13 +118,60 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        switch pickerViewType{
+        case .patient:
+            if let data = self.patientsData{
+                return data.count
+            }
+            break
+        case .physician:
+            if let data = self.physicianData{
+                return data.count
+            }
+            break
+        case .pathologist:
+            if let data = self.pathologistData{
+                return data.count
+            }
+            break
+        default:
+            break
+        }
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.currentField?.text = self.pickerData[row] as? String
-//        self.delegate?.updateFormWithPickerSelection(self.pickerData[row] as! String, forType: self.pickerViewType)
+        var utext = ""
+        switch pickerViewType{
+        case .patient:
+            if let data = self.patientsData{
+                utext = (data[row].firstName as? String)!
+                self.delegate?.updateFormWithPickerSelection("\(data[row].patientId!)", forType: self.pickerViewType)
+            }
+            break
+        case .physician:
+            if let data = self.physicianData{
+                utext = (data[row].firstName as? String)!
+                self.delegate?.updateFormWithPickerSelection("\(data[row].phyId!)", forType: self.pickerViewType)
+            }
+            break
+        case .pathologist:
+            if let data = self.pathologistData{
+                utext = (data[row].firstName as? String)!
+                self.delegate?.updateFormWithPickerSelection("\(data[row].pathId!)", forType: self.pickerViewType)
+            }
+            break
+        default:
+            break
+        }
+        self.currentField?.text = utext
     }
+    
+    func assortDataForPatient(){
+        
+    }
+    
+    
     
     func getPatients(){
         let patients = coredatahandler.fetchPatientDetails() as [PatientDetails]
