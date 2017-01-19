@@ -30,6 +30,11 @@ let insuranceCellIdentifier = "insuranceCellIdentifier"
 let insButtonsCellIdentifier = "insButtonsCellIdentifier"
 let kFetchListNotification = "FetchCaseListNotification"
 
+let hostname = "bmtechsol.com:8080"
+let caseListUrl = "http://\(hostname)/easytox/api/caseOrder"
+let pathologistsUrl = "http://\(hostname)/easytox/api/pathologists"
+let patientsUrl = "http://\(hostname)/easytox/api/patients"
+let physiciansUrl = "http://\(hostname)/easytox/api/physicians"
 let coredatahandler = CoreDatahandler()
 
 class Util:NSObject{

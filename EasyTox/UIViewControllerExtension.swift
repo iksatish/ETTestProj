@@ -18,4 +18,11 @@ extension UIViewController{
     func hideProgressView(){
         MBProgressHUD.hide(for: self.view, animated: true)
     }
+    func showAlert(title: String, message: String)
+    {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+
 }

@@ -28,7 +28,6 @@
 		22654D521C97E35F00E6EBE8 /* PhysicistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22654D501C97E35F00E6EBE8 /* PhysicistTableViewCell.swift */; };
 		22654D531C97E35F00E6EBE8 /* PhysicistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */; };
 		2267EDFD1D374F50001FBC0D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267EDFC1D374F50001FBC0D /* UIViewControllerExtension.swift */; };
-		2267EE0A1D374FF5001FBC0D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267EE091D374FF5001FBC0D /* MBProgressHUD.m */; };
 		2267EE0B1D3750A0001FBC0D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267EDFC1D374F50001FBC0D /* UIViewControllerExtension.swift */; };
 		2267EE0C1D376BC6001FBC0D /* CaseForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC427A1C9E9CE400745EFD /* CaseForm.swift */; };
 		2267EE0D1D376D29001FBC0D /* CaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228612EE1C9F1A6C002A1442 /* CaseListViewController.swift */; };
@@ -49,14 +48,6 @@
 		228C59121C8B55F80064C374 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59101C8B55F80064C374 /* GlobalConstants.swift */; };
 		228C59131C8B56000064C374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9C71C78B17D008067D0 /* AppDelegate.swift */; };
 		228C59141C8B56030064C374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248C9C91C78B17D008067D0 /* ViewController.swift */; };
-		228C59251C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */; };
-		228C59261C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */; };
-		228C59271C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */; };
-		228C59281C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */; };
-		228C59291C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */; };
-		228C592A1C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */; };
-		228C592B1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */; };
-		228C592C1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */; };
 		228C593D1C8E7E5F0064C374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248C9CB1C78B17D008067D0 /* Main.storyboard */; };
 		228C59421C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */; };
 		228C59431C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */; };
@@ -81,6 +72,8 @@
 		22FC428C1C9EC6ED00745EFD /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC428B1C9EC6ED00745EFD /* NewPatientViewController.swift */; };
 		22FC428F1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FC428D1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift */; };
 		22FC42901C9ED2AB00745EFD /* LegacyInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FC428E1C9ED2AB00745EFD /* LegacyInputTableViewCell.xib */; };
+		C64C091C1E3029DE00235DB4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C091B1E3029DE00235DB4 /* BaseViewController.swift */; };
+		C6619B851E2EC0E200D50EFA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C6619B841E2EC0E200D50EFA /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,8 +113,6 @@
 		22654D511C97E35F00E6EBE8 /* PhysicistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhysicistTableViewCell.xib; sourceTree = "<group>"; };
 		2267EDFB1D374EF2001FBC0D /* Swift-Bridge-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Swift-Bridge-header.h"; path = "../Swift-Bridge-header.h"; sourceTree = "<group>"; };
 		2267EDFC1D374F50001FBC0D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		2267EE081D374FF5001FBC0D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../../repo/EasyTox/EasyTox/MBProgressHUD.h; sourceTree = "<group>"; };
-		2267EE091D374FF5001FBC0D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../../repo/EasyTox/EasyTox/MBProgressHUD.m; sourceTree = "<group>"; };
 		228612C51C9EDECA002A1442 /* ButtonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		228612C61C9EDECA002A1442 /* ButtonsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsTableViewCell.xib; sourceTree = "<group>"; };
 		228612C91C9EE218002A1442 /* InsuranceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,10 +125,6 @@
 		228612EB1C9F1169002A1442 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		228612EE1C9F1A6C002A1442 /* CaseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseListViewController.swift; sourceTree = "<group>"; };
 		228C59101C8B55F80064C374 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
-		228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
-		228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
-		228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
-		228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCollectionViewCell.xib; sourceTree = "<group>"; };
 		228C59411C8E9E3E0064C374 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		228C59451C8EA6860064C374 /* PatientDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailsView.xib; sourceTree = "<group>"; };
 		2295D3AD1CE182A6007C3E8B /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkConnection.swift; path = NetworkResources/NetworkConnection.swift; sourceTree = "<group>"; };
@@ -157,6 +144,9 @@
 		22FC428B1C9EC6ED00745EFD /* NewPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
 		22FC428D1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyInputTableViewCell.swift; sourceTree = "<group>"; };
 		22FC428E1C9ED2AB00745EFD /* LegacyInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LegacyInputTableViewCell.xib; sourceTree = "<group>"; };
+		C64C091B1E3029DE00235DB4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C6619B831E2EC0E200D50EFA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../../repos/banners/MasterApp/Classes/ExternalFrameworks/Universal/MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		C6619B841E2EC0E200D50EFA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../../repos/banners/MasterApp/Classes/ExternalFrameworks/Universal/MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,10 +191,10 @@
 				2295D3C81CE1C4E2007C3E8B /* Extensions */,
 				2295D3AC1CE1826E007C3E8B /* NetworkResources */,
 				2295D3CC1CE476B9007C3E8B /* UserSession */,
-				228C59161C8CBC3A0064C374 /* CustomCollectionLayout */,
 				2248C9C71C78B17D008067D0 /* AppDelegate.swift */,
 				228C59441C8EA6470064C374 /* Custom Views */,
 				228C59101C8B55F80064C374 /* GlobalConstants.swift */,
+				C64C091B1E3029DE00235DB4 /* BaseViewController.swift */,
 				2248C9C91C78B17D008067D0 /* ViewController.swift */,
 				22FC428B1C9EC6ED00745EFD /* NewPatientViewController.swift */,
 				22654D4A1C97B98100E6EBE8 /* AddNewCaseViewController.swift */,
@@ -271,72 +261,11 @@
 		228612F51CA0E2AA002A1442 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				2267EE081D374FF5001FBC0D /* MBProgressHUD.h */,
-				2267EE091D374FF5001FBC0D /* MBProgressHUD.m */,
+				C6619B831E2EC0E200D50EFA /* MBProgressHUD.h */,
+				C6619B841E2EC0E200D50EFA /* MBProgressHUD.m */,
 			);
 			name = MBProgressHUD;
 			path = ../../../MBProgressHUD/MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		228C59161C8CBC3A0064C374 /* CustomCollectionLayout */ = {
-			isa = PBXGroup;
-			children = (
-				228C591D1C8CBC600064C374 /* Views */,
-				228C59241C8CBC600064C374 /* Classes */,
-			);
-			name = CustomCollectionLayout;
-			sourceTree = "<group>";
-		};
-		228C59191C8CBC600064C374 /* Content Cell */ = {
-			isa = PBXGroup;
-			children = (
-				228C59171C8CBC600064C374 /* ContentCollectionViewCell.swift */,
-				228C59181C8CBC600064C374 /* ContentCollectionViewCell.xib */,
-			);
-			name = "Content Cell";
-			sourceTree = "<group>";
-		};
-		228C591C1C8CBC600064C374 /* Date Cell */ = {
-			isa = PBXGroup;
-			children = (
-				228C591A1C8CBC600064C374 /* DateCollectionViewCell.swift */,
-				228C591B1C8CBC600064C374 /* DateCollectionViewCell.xib */,
-			);
-			name = "Date Cell";
-			sourceTree = "<group>";
-		};
-		228C591D1C8CBC600064C374 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				228C59191C8CBC600064C374 /* Content Cell */,
-				228C591C1C8CBC600064C374 /* Date Cell */,
-			);
-			name = Views;
-			path = ../../../CustomCollectionViewLayout/CustomCollectionLayout;
-			sourceTree = "<group>";
-		};
-		228C591F1C8CBC600064C374 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		228C59231C8CBC600064C374 /* CustomCollectionViewLayout */ = {
-			isa = PBXGroup;
-			children = (
-				228C591F1C8CBC600064C374 /* Swift */,
-			);
-			name = CustomCollectionViewLayout;
-			sourceTree = "<group>";
-		};
-		228C59241C8CBC600064C374 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				228C59231C8CBC600064C374 /* CustomCollectionViewLayout */,
-			);
-			name = Classes;
-			path = ../../../CustomCollectionViewLayout/CustomCollectionLayout;
 			sourceTree = "<group>";
 		};
 		228C59441C8EA6470064C374 /* Custom Views */ = {
@@ -492,12 +421,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228C59271C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */,
 				22FC42901C9ED2AB00745EFD /* LegacyInputTableViewCell.xib in Resources */,
 				2248C9D51C78B17D008067D0 /* LaunchScreen.storyboard in Resources */,
 				22654D4F1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.xib in Resources */,
 				2248C9D21C78B17D008067D0 /* Assets.xcassets in Resources */,
-				228C592B1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */,
 				2229E8881C9E620E002D34E2 /* DoubleFieldTableViewCell.xib in Resources */,
 				228612C81C9EDECA002A1442 /* ButtonsTableViewCell.xib in Resources */,
 				22FC428A1C9EC5EB00745EFD /* DobAgeTableViewCell.xib in Resources */,
@@ -520,8 +447,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				228C593D1C8E7E5F0064C374 /* Main.storyboard in Resources */,
-				228C592C1C8CBC600064C374 /* DateCollectionViewCell.xib in Resources */,
-				228C59281C8CBC600064C374 /* ContentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,8 +462,10 @@
 				2229E87C1C9DFEB0002D34E2 /* PickerViewController.swift in Sources */,
 				228C59421C8E9E3E0064C374 /* HomeTabBarViewController.swift in Sources */,
 				22654D4E1C97CCEE00E6EBE8 /* PatientDetailsTableViewCell.swift in Sources */,
+				C64C091C1E3029DE00235DB4 /* BaseViewController.swift in Sources */,
 				22FC42781C9E8CF600745EFD /* UITextFieldExtensions.swift in Sources */,
 				2248C9D01C78B17D008067D0 /* EasyTox.xcdatamodeld in Sources */,
+				C6619B851E2EC0E200D50EFA /* MBProgressHUD.m in Sources */,
 				2248C9CA1C78B17D008067D0 /* ViewController.swift in Sources */,
 				22E10EFE1C8EADF100CB0356 /* CustomTextFieldView.swift in Sources */,
 				228612CB1C9EE218002A1442 /* InsuranceTableViewCell.swift in Sources */,
@@ -553,13 +480,10 @@
 				228612CE1C9F0403002A1442 /* PatientForm.swift in Sources */,
 				228612E71C9F08C1002A1442 /* PatientDetails.swift in Sources */,
 				2267EDFD1D374F50001FBC0D /* UIViewControllerExtension.swift in Sources */,
-				228C59291C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */,
-				2267EE0A1D374FF5001FBC0D /* MBProgressHUD.m in Sources */,
 				228612EC1C9F1169002A1442 /* ListTableViewCell.swift in Sources */,
 				22FC428C1C9EC6ED00745EFD /* NewPatientViewController.swift in Sources */,
 				2295D3AE1CE182A6007C3E8B /* NetworkConnection.swift in Sources */,
 				22FC428F1C9ED2AB00745EFD /* LegacyInputTableViewCell.swift in Sources */,
-				228C59251C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */,
 				228612D01C9F05ED002A1442 /* CoreDataHandler.swift in Sources */,
 				2295D3CA1CE1C4F6007C3E8B /* StringExtensions.swift in Sources */,
 				22FC42721C9E6AB200745EFD /* HeaderCellTableViewCell.swift in Sources */,
@@ -585,8 +509,6 @@
 				2248C9E01C78B17D008067D0 /* EasyToxTests.swift in Sources */,
 				2267EE0C1D376BC6001FBC0D /* CaseForm.swift in Sources */,
 				2295D3AF1CE182A6007C3E8B /* NetworkConnection.swift in Sources */,
-				228C592A1C8CBC600064C374 /* DateCollectionViewCell.swift in Sources */,
-				228C59261C8CBC600064C374 /* ContentCollectionViewCell.swift in Sources */,
 				2267EE0B1D3750A0001FBC0D /* UIViewControllerExtension.swift in Sources */,
 				2267EE0D1D376D29001FBC0D /* CaseListViewController.swift in Sources */,
 				2295D3CB1CE1C4F6007C3E8B /* StringExtensions.swift in Sources */,
