@@ -28,6 +28,8 @@ class DoubleFieldTableViewCell: UITableViewCell {
     var delegate:PickerFieldViewDelegate?
     var firstPickerViewType:PickerViewType = PickerViewType.patient
     var secondPickerViewType:PickerViewType = PickerViewType.patient
+    var caseForm = CaseForm()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -51,14 +53,16 @@ class DoubleFieldTableViewCell: UITableViewCell {
             case 3:
                 self.firstHeaderLabel.text = "Date Collected"
                 self.secondHeaderLabel.text = "Date Received"
+                self.firstInputField.placeholder = "  MM/dd/yyyy"
+                self.secondTextField.placeholder = "  MM/dd/yyyy"
             case 4:
                 self.firstHeaderLabel.text = "Case Type"
-                self.firstInputField.text = "  Select One"
+                self.firstInputField.placeholder = "  Select Case Type"
                 self.firstInputField.setUpField(FieldType.dropdown)
                 self.firstViewButton.isHidden = false
                 self.firstPickerViewType = .caseType
                 self.secondHeaderLabel.text = "Logged In By"
-                self.secondTextField.setUpField(FieldType.label)
+                self.secondTextField.isEnabled = false
             case 5:
                 self.firstHeaderLabel.text = "Prescribed Medicine"
                 self.secondFieldView.isHidden = true
@@ -68,35 +72,34 @@ class DoubleFieldTableViewCell: UITableViewCell {
             }
             
         }else if cellFor == physicianFormIdentifier{
+            self.radioFieldView.isHidden = true
+
             switch (indexPath as NSIndexPath).row{
             case 1:
                 self.firstHeaderLabel.text = "Primary Physician"
                 self.firstInputField.setUpField(FieldType.dropdown)
                 self.firstViewButton.isHidden = false
-                self.firstPickerViewType = .physician
-                self.firstInputField.text = "  Select Physician"
+                self.firstPickerViewType = .primaryPhysician
+                self.firstInputField.placeholder = "  Select Physician"
                 self.secondHeaderLabel.text = "Secondary Physician"
                 self.secondTextField.setUpField(FieldType.dropdown)
                 self.secondViewButton.isHidden = false
-                self.secondTextField.text = "  Select Physician"
-                self.secondPickerViewType = .physician
+                self.secondTextField.placeholder = "  Select Physician"
+                self.secondPickerViewType = .secondaryPhysician
             case 2:
                 self.firstHeaderLabel.text = "Cc Physician"
-                self.firstInputField.setUpField(FieldType.dropdown)
                 self.firstViewButton.isHidden = false
-                self.firstPickerViewType = .physician
+                self.firstPickerViewType = .ccPhysician
+                self.firstInputField.placeholder = "  Select Cc Physician"
                 self.secondHeaderLabel.text = "Compound Profile"
-                self.secondTextField.setUpField(FieldType.dropdown)
-                self.secondViewButton.isHidden = false
-                self.secondTextField.text = "  Select Profile"
-                self.secondPickerViewType = .physician
+                self.secondViewButton.isHidden = true
+                self.secondTextField.placeholder = "  Select Profile"
             case 3:
                 self.firstHeaderLabel.text = "Pathologist"
                 self.firstInputField.setUpField(FieldType.dropdown)
-                self.firstInputField.text = "  Select Pathologist"
+                self.firstInputField.placeholder = "  Select Pathologist"
                 self.firstPickerViewType = .pathologist
                 self.firstViewButton.isHidden = false
-                self.firstInputField.text = "  Select Physician"
                 self.secondFieldView.isHidden = true
             case 4:
                 self.firstHeaderLabel.text = "Final Interpretation"
@@ -107,7 +110,7 @@ class DoubleFieldTableViewCell: UITableViewCell {
                 self.firstInputField.setUpField(FieldType.dropdown)
                 self.firstPickerViewType = .insuranceType
                 self.firstViewButton.isHidden = false
-                self.firstInputField.text = "  Select Insurance Type"
+                self.firstInputField.placeholder = "  Select Insurance Type"
                 self.secondFieldView.isHidden = true
             case 6:
                 self.firstHeaderLabel.text = "Injury Date"

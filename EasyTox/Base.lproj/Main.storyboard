@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-aL-PIz">
@@ -210,7 +210,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kIC-6k-cCK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GEe-BE-ALs">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SXl-WY-iM5">
@@ -250,11 +250,14 @@
                                                     <color key="backgroundColor" red="0.25882352941176467" green="0.49803921568627452" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="UXO-YF-LEY"/>
-                                                        <constraint firstAttribute="width" constant="61" id="Zni-Wb-Pbs"/>
+                                                        <constraint firstAttribute="width" constant="60" id="Zni-Wb-Pbs"/>
                                                     </constraints>
                                                     <state key="normal" title="Submit">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="submitForm:" destination="d6a-N7-dj7" eventType="touchUpInside" id="z3N-O7-bFf"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -332,7 +335,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Gc5-dB-caG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HC1-iu-TRN">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-ly-nbB">
@@ -364,7 +367,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ok3-mp-zKm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qkg-YI-4d6">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SF1-6Q-gjC">
@@ -449,7 +452,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vWu-Qm-Kqh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g90-AW-BE7">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snJ-f6-jIX">
@@ -592,7 +595,7 @@
                         <viewControllerLayoutGuide type="bottom" id="TVD-jt-D96"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="siL-es-u1c">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01H-nb-aTj">
@@ -697,15 +700,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="SortByVcId" id="sVz-P8-mVi" customClass="SortByTableViewController" customModule="EasyTox" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0kv-nz-5Z4">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="3KI-L2-0Al">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3KI-L2-0Al" id="Fps-Bg-YCw">
-                                    <frame key="frameInset" width="768" height="43"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -729,7 +732,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Vjc-nU-ewL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dC3-te-j1V">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OgV-rL-qBW">

@@ -127,7 +127,7 @@
                             <constraint firstItem="VjY-2N-l2F" firstAttribute="height" secondItem="Q9w-9d-zih" secondAttribute="height" id="zjA-bl-V0f"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HR-Cr-Qho">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HR-Cr-Qho">
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-pg-Zs9">
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -150,10 +150,11 @@
                             <constraint firstItem="f9T-pg-Zs9" firstAttribute="leading" secondItem="1HR-Cr-Qho" secondAttribute="leading" id="PXC-4o-pvH"/>
                             <constraint firstItem="f9T-pg-Zs9" firstAttribute="top" secondItem="1HR-Cr-Qho" secondAttribute="top" id="edq-vc-qsG"/>
                             <constraint firstItem="zE4-JF-Moh" firstAttribute="centerX" secondItem="1HR-Cr-Qho" secondAttribute="centerX" id="lde-yv-gTr"/>
+                            <constraint firstAttribute="width" id="oxC-8E-ybI"/>
                             <constraint firstItem="f9T-pg-Zs9" firstAttribute="width" secondItem="1HR-Cr-Qho" secondAttribute="width" id="t18-Qw-ylB"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUf-wH-px2">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUf-wH-px2">
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN1-6i-f9k">
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -210,19 +211,18 @@
                     <constraint firstItem="rxs-zj-bhf" firstAttribute="height" secondItem="kb9-XN-KIf" secondAttribute="height" id="fk8-ey-FrE"/>
                     <constraint firstItem="Nb0-eL-8mK" firstAttribute="top" secondItem="yAb-8x-iL1" secondAttribute="top" id="hj8-JD-t7w"/>
                     <constraint firstItem="1HR-Cr-Qho" firstAttribute="width" secondItem="Q9w-9d-zih" secondAttribute="width" id="iJh-AA-Tsq"/>
-                    <constraint firstItem="1HR-Cr-Qho" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7:9" id="iS4-Hn-fqE"/>
                     <constraint firstItem="kb9-XN-KIf" firstAttribute="top" secondItem="Nb0-eL-8mK" secondAttribute="top" id="odP-MF-4VT"/>
                     <constraint firstItem="rxs-zj-bhf" firstAttribute="width" secondItem="kb9-XN-KIf" secondAttribute="width" id="qg3-gb-2qJ"/>
                     <constraint firstItem="P0f-B2-4o9" firstAttribute="width" secondItem="pgj-0T-3Kw" secondAttribute="width" id="tR4-68-dUQ"/>
                     <constraint firstItem="tUf-wH-px2" firstAttribute="height" secondItem="1HR-Cr-Qho" secondAttribute="height" id="unw-4S-Pwa"/>
                     <constraint firstItem="rxs-zj-bhf" firstAttribute="top" secondItem="kb9-XN-KIf" secondAttribute="top" id="wig-Fm-JwD"/>
-                    <constraint firstItem="Nb0-eL-8mK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:9" id="xnM-zb-omj"/>
+                    <constraint firstItem="Nb0-eL-8mK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1.2:9" id="xnM-zb-omj"/>
                     <constraint firstItem="pgj-0T-3Kw" firstAttribute="width" secondItem="rxs-zj-bhf" secondAttribute="width" id="y4l-21-g00"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="eI5-bP-hhZ"/>
                         <exclude reference="iJh-AA-Tsq"/>
+                        <exclude reference="eI5-bP-hhZ"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

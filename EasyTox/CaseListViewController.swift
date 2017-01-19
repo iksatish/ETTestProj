@@ -40,7 +40,7 @@ enum SortType:String{
     }
 }
 
-class CaseListViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, URLSessionDelegate {
+class CaseListViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, URLSessionDelegate, SortByDelegate {
 
     var caseListData : [CaseFormSimplified]?
     var actualCaseData : [CaseForm]?
@@ -50,6 +50,7 @@ class CaseListViewController: BaseViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(CaseListViewController.fetchCaseList(_:)), name: NSNotification.Name(rawValue: kFetchListNotification), object: nil)
         self.tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier:"listCellIdentifier")
+        self.completeAction()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -107,13 +108,23 @@ class CaseListViewController: BaseViewController, UITableViewDataSource, UITable
                     continue
                 }
                 caseFormSimpl.caseAccession = "\(data.caseNo!)" as NSString
-                
-                caseFormSimpl.firstName = "\(data.patientName!)" as NSString
+                if let name = data.patientName {
+                    let nameArr = name.components(separatedBy: " ")
+                    if nameArr.count > 0 {
+                        caseFormSimpl.firstName = nameArr[0] as NSString
+                        caseFormSimpl.lastName = nameArr[nameArr.count-1] as NSString
+                    }else{
+                        caseFormSimpl.firstName = name
+                    }
+                    
+                }
                 if let recNO = data.medRecNo{
                     caseFormSimpl.medRecNo = recNO
                 }
                 caseFormSimpl.dob = "\(data.patientId!)" as NSString
-//                caseFormSimpl.dateCollected = data.dateCollected!
+                if let dc = data.dateCollected as? String   {
+                    caseFormSimpl.dateCollected = Util.dateFor(dc)
+                }
                 caseFormSimpl.statusFlag = (data.statusFlag)!
                 tableData.append(caseFormSimpl)
             }
@@ -129,29 +140,30 @@ class CaseListViewController: BaseViewController, UITableViewDataSource, UITable
         sortByVC.preferredContentSize = CGSize(width: 160, height: 320)
         sortByVC.popoverPresentationController?.sourceView = sender
         sortByVC.popoverPresentationController?.sourceRect = CGRect(x: sender.frame.origin.x, y: sender.center.y, width: 1, height: 1)
-//        sortByVC.delegate = self
+        sortByVC.delegate = self
         self.present(sortByVC, animated: true, completion: nil)
     }
     
-//    func sortBy(_ type: SortType) {
-//        let sortedArray = self.caseListData!.sortedArray (comparator: {
-//            (obj1, obj2) -> ComparisonResult in
-//            
-//            let p1 = obj1 as! CaseFormSimplified
-//            let p2 = obj2 as! CaseFormSimplified
-//            
-//            let key = self.getSortKey(type)
-//            if type == .DateCollected{
-//                return (p2.value(forKey: key) as! Date).compare(p1.value(forKey: key) as! Date)
-//            }else{
-//                return (p2.value(forKey: key) as! String).caseInsensitiveCompare(p1.value(forKey: key) as! String)
-//            }
-//        })
-//        self.caseListData = NSMutableArray(array: sortedArray)
-////        let arrayData = self.caseListData
-////        self.caseListData = self.caseListData!.sort { ($0.caseAccession as! String) > $1.caseAccession as! String)
-//        self.tableView.reloadData()
-//    }
+    func sortBy(_ type: SortType) {
+        let listArray = self.caseListData as! NSMutableArray
+        let sortedArray = listArray.sortedArray (comparator: {
+            (obj1, obj2) -> ComparisonResult in
+            
+            let p1 = obj1 as! CaseFormSimplified
+            let p2 = obj2 as! CaseFormSimplified
+            
+            let key = self.getSortKey(type)
+            if type == .DateCollected{
+                return (p2.value(forKey: key) as! Date).compare(p1.value(forKey: key) as! Date)
+            }else{
+                return (p2.value(forKey: key) as! String).caseInsensitiveCompare(p1.value(forKey: key) as! String)
+            }
+        })
+        self.caseListData = (sortedArray as? [CaseFormSimplified])
+//        let arrayData = self.caseListData
+//        self.caseListData = self.caseListData!.sort { ($0.caseAccession as! String) > $1.caseAccession as! String)
+        self.tableView.reloadData()
+    }
    
     func getSortKey(_ type:SortType) -> String{
         switch type{

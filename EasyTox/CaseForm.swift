@@ -21,6 +21,8 @@ class CaseForm:NSObject{
     var primaryPhysicianId:NSInteger?
     var primaryPhysicianName:NSString?
     var physicianLocation:NSString?
+    var secondaryPhysicianId:NSInteger?
+    var ccPhysicianId:NSInteger?
     var secondaryPhysician:NSString?
     var ccPhysician:NSString?
     var loggedInBy:NSString?

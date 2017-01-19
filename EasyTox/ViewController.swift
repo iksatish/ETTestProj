@@ -107,6 +107,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if let token = (jsonData as AnyObject).value(forKey: "access_token"){
                 let defaults = UserDefaults.standard
                 defaults.setValue(token, forKey: "EX-Token")
+                defaults.setValue(self.userNameField.text, forKey: "usr")
+                defaults.setValue(self.passwordField.text, forKey: "pwd")
                 defaults.synchronize()
             }
         }

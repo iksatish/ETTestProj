@@ -38,23 +38,27 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t65-qQ-Yby" userLabel="collected" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="116" id="6Nd-up-3CD"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Date Collected"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Collected"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
-                    </userDefinedRuntimeAttributes>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="6Nd-up-3CD"/>
-                        </mask>
-                    </variation>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-tH-bT4" userLabel="ctype" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-tH-bT4" userLabel="ctype" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <frame key="frameInset" minX="8" minY="294" width="290.5" height="85"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t65-qQ-Yby" userLabel="collected" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                            <frame key="frameInset" width="290.5" height="85"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="116" id="6Nd-up-3CD"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="header" value="Date Collected"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Collected"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="6Nd-up-3CD"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="fGA-sH-AfU"/>
@@ -69,8 +73,44 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-s0-c6b" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-s0-c6b" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
                     <frame key="frameInset" width="1000" height="1000"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-pE-7Da" userLabel="collected" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                            <frame key="frameInset" minX="354" minY="457" width="290.5" height="85"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="116" id="aJk-Ds-zYW"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="header" value="Date Collected"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Collected"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="aJk-Ds-zYW"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-D4-UpG" userLabel="logged" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                            <frame key="frameInset" width="1000" height="1000"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="116" id="1fD-Iu-y1C"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="header" value="Logged in By"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Collected"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="1fD-Iu-y1C"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="BBD-8a-ge5"/>
@@ -88,9 +128,32 @@
                 </view>
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrN-wp-18F" userLabel="record" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
                     <frame key="frameInset" width="1000" height="1000"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3by-1n-jfM" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                            <frame key="frameInset" minX="-8" minY="8" width="1000" height="1000"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="116" id="LTh-dy-3en"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="header" value="Date Received"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Received"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="LTh-dy-3en"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="3by-1n-jfM" firstAttribute="leading" secondItem="rrN-wp-18F" secondAttribute="leading" constant="-8" id="9uI-k0-BNN"/>
+                        <constraint firstItem="3by-1n-jfM" firstAttribute="trailing" secondItem="rrN-wp-18F" secondAttribute="trailing" constant="-8" id="Dgf-Hp-4n6"/>
                         <constraint firstAttribute="height" constant="116" id="M9K-nu-xQq"/>
+                        <constraint firstItem="3by-1n-jfM" firstAttribute="top" secondItem="rrN-wp-18F" secondAttribute="bottom" constant="-992" id="Oyo-nw-NbU"/>
+                        <constraint firstItem="3by-1n-jfM" firstAttribute="height" secondItem="rrN-wp-18F" secondAttribute="height" id="zAw-2s-ITR"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="header" value="Medical Record"/>
@@ -102,24 +165,8 @@
                         </mask>
                     </variation>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3by-1n-jfM" userLabel="received" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
-                    <frame key="frameInset" width="1000" height="1000"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="116" id="LTh-dy-3en"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="header" value="Date Received"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Date Received"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="mm/dd/yyyy"/>
-                    </userDefinedRuntimeAttributes>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="LTh-dy-3en"/>
-                        </mask>
-                    </variation>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjQ-9t-TLD" userLabel="medicine" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rjQ-9t-TLD" userLabel="medicine" customClass="CustomTextFieldView" customModule="EasyTox" customModuleProvider="target">
+                    <frame key="frameInset" minX="8" minY="387" width="290.5" height="85"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="Ri1-1x-HFQ"/>
@@ -136,35 +183,19 @@
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="3by-1n-jfM" firstAttribute="leading" secondItem="rrN-wp-18F" secondAttribute="leading" id="0nV-G1-MKx"/>
-                <constraint firstItem="t65-qQ-Yby" firstAttribute="top" secondItem="qSf-l5-WQ6" secondAttribute="bottom" constant="8" id="2cK-Ym-qZt"/>
                 <constraint firstItem="rjQ-9t-TLD" firstAttribute="leading" secondItem="zmm-tH-bT4" secondAttribute="leading" id="5sl-Dr-P2b"/>
-                <constraint firstItem="3by-1n-jfM" firstAttribute="height" secondItem="rrN-wp-18F" secondAttribute="height" id="84x-29-myi"/>
-                <constraint firstItem="qvN-s0-c6b" firstAttribute="top" secondItem="3by-1n-jfM" secondAttribute="bottom" constant="8" id="F9s-7c-dd6"/>
-                <constraint firstItem="qvN-s0-c6b" firstAttribute="height" secondItem="3by-1n-jfM" secondAttribute="height" id="JIx-jG-eFm"/>
                 <constraint firstItem="rrN-wp-18F" firstAttribute="top" secondItem="6Yd-p7-3iC" secondAttribute="bottom" constant="8" id="JnT-Rw-3Qe"/>
-                <constraint firstItem="qvN-s0-c6b" firstAttribute="leading" secondItem="3by-1n-jfM" secondAttribute="leading" id="Jt6-vb-XZ5"/>
-                <constraint firstItem="zmm-tH-bT4" firstAttribute="trailing" secondItem="t65-qQ-Yby" secondAttribute="trailing" id="RoM-vP-W1c"/>
-                <constraint firstItem="3by-1n-jfM" firstAttribute="top" secondItem="rrN-wp-18F" secondAttribute="bottom" constant="8" id="VtS-YP-xFi"/>
                 <constraint firstItem="6Yd-p7-3iC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="WKi-bq-Ly5"/>
                 <constraint firstItem="rrN-wp-18F" firstAttribute="leading" secondItem="6Yd-p7-3iC" secondAttribute="centerX" constant="4" id="WZ6-u3-FcR"/>
                 <constraint firstItem="qSf-l5-WQ6" firstAttribute="top" secondItem="6Yd-p7-3iC" secondAttribute="bottom" constant="8" id="XFh-Q5-Oia"/>
-                <constraint firstItem="zmm-tH-bT4" firstAttribute="top" secondItem="t65-qQ-Yby" secondAttribute="bottom" constant="8" id="YQa-5m-cmP"/>
                 <constraint firstItem="rrN-wp-18F" firstAttribute="trailing" secondItem="6Yd-p7-3iC" secondAttribute="trailing" id="YRw-jh-k3N"/>
-                <constraint firstItem="t65-qQ-Yby" firstAttribute="height" secondItem="qSf-l5-WQ6" secondAttribute="height" id="aYf-kD-EKo"/>
                 <constraint firstItem="qSf-l5-WQ6" firstAttribute="trailing" secondItem="6Yd-p7-3iC" secondAttribute="centerX" constant="-4" id="cJg-gR-rwK"/>
                 <constraint firstItem="qSf-l5-WQ6" firstAttribute="leading" secondItem="6Yd-p7-3iC" secondAttribute="leading" id="cTy-MU-AtJ"/>
                 <constraint firstItem="rjQ-9t-TLD" firstAttribute="top" secondItem="zmm-tH-bT4" secondAttribute="bottom" constant="8" id="fS6-ND-q4X"/>
-                <constraint firstItem="zmm-tH-bT4" firstAttribute="leading" secondItem="t65-qQ-Yby" secondAttribute="leading" id="g7g-BD-2Zf"/>
-                <constraint firstItem="t65-qQ-Yby" firstAttribute="leading" secondItem="qSf-l5-WQ6" secondAttribute="leading" id="k1Y-r8-shT"/>
                 <constraint firstItem="rrN-wp-18F" firstAttribute="width" secondItem="6Yd-p7-3iC" secondAttribute="width" id="ocL-7y-onI"/>
-                <constraint firstItem="3by-1n-jfM" firstAttribute="trailing" secondItem="rrN-wp-18F" secondAttribute="trailing" id="r1a-9q-VwW"/>
                 <constraint firstAttribute="trailing" secondItem="6Yd-p7-3iC" secondAttribute="trailing" constant="8" id="rQG-sJ-2Eb"/>
                 <constraint firstItem="rjQ-9t-TLD" firstAttribute="trailing" secondItem="zmm-tH-bT4" secondAttribute="trailing" id="uEn-KM-Q58"/>
-                <constraint firstItem="t65-qQ-Yby" firstAttribute="trailing" secondItem="qSf-l5-WQ6" secondAttribute="trailing" id="vtx-t8-tHc"/>
                 <constraint firstItem="rjQ-9t-TLD" firstAttribute="height" secondItem="zmm-tH-bT4" secondAttribute="height" id="wuI-Kn-3zJ"/>
-                <constraint firstItem="zmm-tH-bT4" firstAttribute="height" secondItem="t65-qQ-Yby" secondAttribute="height" id="xAp-t2-bL3"/>
-                <constraint firstItem="qvN-s0-c6b" firstAttribute="trailing" secondItem="3by-1n-jfM" secondAttribute="trailing" id="xms-ej-NHR"/>
                 <constraint firstItem="qSf-l5-WQ6" firstAttribute="height" secondItem="6Yd-p7-3iC" secondAttribute="height" id="yNc-f5-Lsj"/>
                 <constraint firstItem="6Yd-p7-3iC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="zp7-t2-t7d"/>
             </constraints>

@@ -11,7 +11,9 @@ import UIKit
 enum PickerViewType:Int{
     case patient
     case caseType
-    case physician
+    case primaryPhysician
+    case secondaryPhysician
+    case ccPhysician
     case compoundProfile
     case pathologist
     case insuranceType
@@ -22,7 +24,7 @@ protocol PickerViewCallBackDelegate{
 }
 
 class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     @IBOutlet weak var pickerViewTitle: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     var pickerData:NSMutableArray = []
@@ -43,10 +45,7 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             self.pickerViewTitle.text = "Select Patient"
             self.patientsData = tabBarVC.patientList
             break
-        case .caseType:
-            self.pickerViewTitle.text = "Select Case Type"
-            break
-        case .physician:
+        case .primaryPhysician, .secondaryPhysician, .ccPhysician:
             self.pickerViewTitle.text = "Select Physician"
             self.physicianData = tabBarVC.physiciansList
             break
@@ -57,14 +56,19 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             self.pickerViewTitle.text = "Select Pathlogist"
             self.pathologistData = tabBarVC.pathologistsList
             break
-        default:
+        case .insuranceType:
+            self.pickerData = ["Primary", "Secondary", "Tertiary", "Worksmen", "None"]
             self.pickerViewTitle.text = "Select Insurance Type"
-
+            break
+        case .caseType:
+            self.pickerData = ["Oral", "Urine"]
+            self.pickerViewTitle.text = "Select Case Type"
+            break
+        default:
             break
         }
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,44 +83,27 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func dismissPickerView(_ sender:UIGestureRecognizer){
         self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerViewType{
         case .patient:
-            if let data = self.patientsData{
-                return data[row].firstName as String?
-            }
-            break
-        case .physician:
-            if let data = self.physicianData{
-                return data[row].firstName as String?
-            }
-            break
+            return self.getPatientName(index: row)
+        case .primaryPhysician, .secondaryPhysician, .ccPhysician:
+            return self.getPhyName(index: row)
         case .pathologist:
-            if let data = self.pathologistData{
-                return data[row].firstName as String?
-            }
-            break
+            return self.getPatholoName(index: row)
+        case .insuranceType, .caseType:
+            return pickerData[row] as? String
         default:
-            self.pickerViewTitle.text = "Select Insurance Type"
             break
         }
-        return pickerData[row] as? String
+        return ""
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerViewType{
         case .patient:
@@ -124,7 +111,7 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 return data.count
             }
             break
-        case .physician:
+        case .primaryPhysician, .secondaryPhysician, .ccPhysician:
             if let data = self.physicianData{
                 return data.count
             }
@@ -134,6 +121,8 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 return data.count
             }
             break
+        case .insuranceType, .caseType:
+            return self.pickerData.count
         default:
             break
         }
@@ -145,21 +134,25 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         switch pickerViewType{
         case .patient:
             if let data = self.patientsData{
-                utext = (data[row].firstName as? String)!
+                utext = self.getPatientName(index: row)
                 self.delegate?.updateFormWithPickerSelection("\(data[row].patientId!)", forType: self.pickerViewType)
             }
             break
-        case .physician:
+        case .primaryPhysician, .secondaryPhysician, .ccPhysician:
             if let data = self.physicianData{
-                utext = (data[row].firstName as? String)!
+                utext = self.getPhyName(index: row)
                 self.delegate?.updateFormWithPickerSelection("\(data[row].phyId!)", forType: self.pickerViewType)
             }
             break
         case .pathologist:
             if let data = self.pathologistData{
-                utext = (data[row].firstName as? String)!
+                utext = self.getPatholoName(index: row)
                 self.delegate?.updateFormWithPickerSelection("\(data[row].pathId!)", forType: self.pickerViewType)
             }
+            break
+        case .insuranceType, .caseType:
+            utext = self.pickerData[row] as! String
+            self.delegate?.updateFormWithPickerSelection(utext, forType: self.pickerViewType)
             break
         default:
             break
@@ -173,10 +166,49 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     
-    func getPatients(){
-        let patients = coredatahandler.fetchPatientDetails() as [PatientDetails]
-        for patient in patients{
-            self.pickerData.add("\(patient.firstName!) \(patient.lastName!)")
+    func getPatientName(index:Int) -> String{
+        guard let patients = self.patientsData else {return ""}
+        var cusName = ""
+        let pat = patients[index]
+        if let fn = pat.firstName as? String{
+            cusName = fn.capitalized
         }
+        if let ln = pat.lastName as? String{
+            cusName = cusName + " " + ln.capitalized
+        }
+        if let medRecNo = pat.medRecNo as? String{
+            cusName = cusName + " Record Number:" + medRecNo
+        }
+        if let dob = pat.dateOfBirth as? String{
+            cusName = cusName + " DOB:" + dob
+        }
+        return cusName
     }
+    
+    func getPatholoName(index:Int) -> String{
+        guard let paths = self.pathologistData else {return ""}
+        var cusName = ""
+        let pat = paths[index]
+        if let fn = pat.firstName as? String{
+            cusName = fn.capitalized
+        }
+        if let ln = pat.lastName as? String{
+            cusName = cusName + " " + ln.capitalized
+        }
+        return cusName
+    }
+    
+    func getPhyName(index:Int) -> String{
+        guard let phys = self.physicianData else {return ""}
+        var cusName = ""
+        let pat = phys[index]
+        if let fn = pat.firstName as? String{
+            cusName = fn.capitalized
+        }
+        if let ln = pat.lastName as? String{
+            cusName = cusName + " " + ln.capitalized
+        }
+        return cusName
+    }
+    
 }

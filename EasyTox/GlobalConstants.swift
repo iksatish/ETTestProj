@@ -44,13 +44,15 @@ class Util:NSObject{
         let dateFormatter = DateFormatter()
         
         //Specify Format of String to Parse
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = "MM/dd/yyyy"
         
         //Parse into NSDate
-        let dateFromString : Date = dateFormatter.date(from: timeStamp)!
+        if let dateFromString = dateFormatter.date(from: timeStamp){
+            return dateFromString
+        }
         
         //Return Parsed Date
-        return dateFromString
+        return Date()
     }
     class func dateFors(_ timeStamp: String) -> Date
     {
