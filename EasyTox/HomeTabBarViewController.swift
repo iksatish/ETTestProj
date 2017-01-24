@@ -16,7 +16,6 @@ class HomeTabBarViewController: UITabBarController,LoginDelegate, URLSessionDele
     var caseList:[CaseForm]?
     var patientList: [Patient]?
     var physiciansList: [Physician]?
-    var patientsList: [Patient]?
     var pathologistsList: [Pathologist]?
     
     override func viewDidLoad() {

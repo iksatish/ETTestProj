@@ -64,7 +64,7 @@ class ListTableViewCell: UITableViewCell {
             textFields[0].text = "\(caseForm!.caseAccession)"
             textFields[1].text = "\(caseForm!.firstName)"
             textFields[2].text = "\(caseForm!.lastName)"
-            textFields[3].text = "24/Mar/1989"
+            textFields[3].text = "\(caseForm!.dob)"
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .short
             textFields[4].text = "\(dateFormatter.string(from: caseForm!.dateCollected as Date))"

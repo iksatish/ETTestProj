@@ -108,7 +108,18 @@ class CaseListViewController: BaseViewController, UITableViewDataSource, UITable
                     continue
                 }
                 caseFormSimpl.caseAccession = "\(data.caseNo!)" as NSString
-                if let name = data.patientName {
+                if let patientId = data.patientId, let ind = tabBarVC.patientList?.index(where: {$0.patientId == patientId}), let patObj = tabBarVC.patientList?[ind]{
+                    if let _ = patObj.firstName{
+                        caseFormSimpl.firstName = patObj.firstName!
+                    }
+                    if let _ = patObj.lastName{
+                        caseFormSimpl.lastName = patObj.lastName!
+                    }
+                    if let _ = patObj.dateOfBirth{
+                        caseFormSimpl.dob = patObj.dateOfBirth!
+                    }
+
+                }else if let name = data.patientName {
                     let nameArr = name.components(separatedBy: " ")
                     if nameArr.count > 0 {
                         caseFormSimpl.firstName = nameArr[0] as NSString
@@ -121,7 +132,6 @@ class CaseListViewController: BaseViewController, UITableViewDataSource, UITable
                 if let recNO = data.medRecNo{
                     caseFormSimpl.medRecNo = recNO
                 }
-                caseFormSimpl.dob = "\(data.patientId!)" as NSString
                 if let dc = data.dateCollected as? String   {
                     caseFormSimpl.dateCollected = Util.dateFor(dc)
                 }
@@ -191,7 +201,17 @@ class CaseListViewController: BaseViewController, UITableViewDataSource, UITable
 
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let caseNo = self.caseListData?[indexPath.row].caseAccession, let index = self.actualCaseData?.index(where: {$0.caseNo == caseNo}), let caseData = self.actualCaseData?[index] else{
+            self.showAlert(title: "Service Error!", message: "Details not available right now!")
+            return
+        }
+
+        if let newCaseVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddNewCaseViewController") as? AddNewCaseViewController{
+            newCaseVC.isNewCase = false
+            newCaseVC.caseForm = caseData
+            
+         self.present(newCaseVC, animated: true, completion: nil)
+        }
     }
     
     

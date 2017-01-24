@@ -35,6 +35,7 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.register(UINib(nibName: "HeaderCellTableViewCell", bundle: nil), forCellReuseIdentifier: headerCellIdentifier)
         let ftview = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 200))
         self.tableView.tableFooterView = ftview
+        self.cancelBtn.isHidden = self.isNewCase
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -63,12 +64,7 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
         case 0:
             return 6
         case 1:
-            if self.insuranceType == "Worksmen"{
-                return 7
-            }
-            else{
-                return 6
-            }
+            return 6
         default:
             return 1
         }
@@ -88,24 +84,46 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
                 cell.inputField.setUpField(FieldType.dropdown)
                 cell.delegate = self
                 cell.pickerDelegate = self
+                if !self.isNewCase{
+                    self.disableTextField(txtField: cell.inputField)
+                    cell.inputField.text = self.caseForm.patientName as String?
+                }
                 self.prescribedMedicine = cell.inputField
                 return cell
             }else{
                 let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: doubleCellIdentifier)! as! DoubleFieldTableViewCell
                 cell.setUpCell(indexPath, cellFor: patientFormIdentifier)
                 cell.delegate = self
+                if !self.isNewCase{
+                    self.disableTextField(txtField: cell.firstInputField)
+                    self.disableTextField(txtField: cell.secondTextField)
+                }
                 if (indexPath as NSIndexPath).row == 2{
                     self.caseNoTF = cell.firstInputField
                     if let caseNo = caseForm.caseNo as? String{
                         cell.firstInputField.text = caseNo
                     }
                     self.medRecNoTF = cell.secondTextField
+                    if !isNewCase{
+                        cell.firstInputField.text = self.caseForm.caseNo as String?
+                        cell.secondTextField.text = self.caseForm.medRecNo as String?
+                    }
+
                 }else if (indexPath as NSIndexPath).row == 3{
                     self.dateCollectedTF = cell.firstInputField
                     self.dateReceivedTF = cell.secondTextField
+                    if !isNewCase{
+                        cell.firstInputField.text = self.caseForm.dateCollected as String?
+                        cell.secondTextField.text = self.caseForm.dateReceived as String?
+                    }
+
                 }else if (indexPath as NSIndexPath).row == 4{
                     self.caseTypeTF = cell.firstInputField
                     self.loggedInByTF = cell.secondTextField
+                    if !isNewCase{
+                        cell.firstInputField.text = self.caseForm.caseType as String?
+                        cell.secondTextField.text = self.caseForm.loggedInBy as String?
+                    }
                 }
                 return cell
             }
@@ -118,9 +136,34 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
                 let cell:DoubleFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: doubleCellIdentifier)! as! DoubleFieldTableViewCell
                 cell.setUpCell(indexPath, cellFor: physicianFormIdentifier)
                 cell.delegate = self
+                if !self.isNewCase{
+                    self.disableTextField(txtField: cell.firstInputField)
+                    self.disableTextField(txtField: cell.secondTextField)
+                }
+                if (indexPath as NSIndexPath).row == 1 {
+                    if !isNewCase{
+                        cell.firstInputField.text = self.caseForm.primaryPhysicianName as String?
+                        cell.secondTextField.text = self.caseForm.secondaryPhysician as String?
+                    }
+                }else if (indexPath as NSIndexPath).row == 2 {
+                    if !isNewCase{
+                        cell.firstInputField.text = self.caseForm.ccPhysician as String?
+                        cell.secondTextField.text = self.caseForm.profile as String?
+                    }
+                }else if (indexPath as NSIndexPath).row == 3 {
+                    if let pathId = self.caseForm.pathologistId, !isNewCase{
+                        cell.firstInputField.text = self.getPatholoName(index: pathId) as String?
+                    }
+                }else if (indexPath as NSIndexPath).row == 3 {
+                    if !isNewCase{
+                        cell.firstInputField.text = self.caseForm.insuranceType as String?
+                    }
+                }
+
                 if (indexPath as NSIndexPath).row == 4{
                     self.finalInterpretationTF = cell.firstInputField
                     self.showOnReportSW = cell.switchView
+                    self.showOnReportSW?.isEnabled = self.isNewCase
                     if let isSwitchedOn = caseForm.showOnReport{
                         cell.switchView.setOn(isSwitchedOn, animated: true)
                     }
@@ -128,7 +171,11 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
                 return cell
             }
         default:
-            let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "submitCellIdentifier")! as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "submitCellIdentifier")! as! ActionTableViewCell
+            if !isNewCase{
+                cell.actionButton.setTitle("Close", for: .normal)
+                cell.actionButton.addTarget(self, action: #selector(onTappingCancel), for: .touchUpInside)
+            }
             return cell
         }
     }
@@ -156,6 +203,19 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    func getPatholoName(index:Int) -> String{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let tabBarVC = appDelegate.window?.rootViewController as? HomeTabBarViewController, let paths = tabBarVC.pathologistsList else {return ""}
+        var cusName = ""
+        let pat = paths[index]
+        if let fn = pat.firstName as? String{
+            cusName = fn.capitalized
+        }
+        if let ln = pat.lastName as? String{
+            cusName = cusName + " " + ln.capitalized
+        }
+        return cusName
+    }
+
     //MARK: Cell Delegate
     func collapseThisCell(_ rowNum: Int, isCollapsing:Bool) {
         if isCollapsing{
@@ -213,6 +273,10 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     @IBAction func submitForm(_ sender: UIButton) {
+        guard self.isNewCase else{
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
         caseForm.dateReceived = self.dateReceivedTF?.text as NSString?
         caseForm.dateCollected = self.dateCollectedTF?.text as NSString?
         caseForm.medRecNo = self.medRecNoTF?.text as NSString?
@@ -272,7 +336,7 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
         let session = URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue.main)
         let request = NSMutableURLRequest(url: url)
         do {
-          let requestNSData = try JSONSerialization.data(withJSONObject: ddata, options: [])
+          let requestNSData = try JSONSerialization.data(withJSONObject: ddata, options: JSONSerialization.WritingOptions.prettyPrinted)
             request.httpBody = requestNSData
         }catch{
             return
@@ -293,7 +357,7 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
                     self.showLogOutAlert()
                     return
                 }
-                guard let _ = data, let jsonData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? [NSString : AnyObject] else
+                guard let _ = data, let jsonData = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary else
                 {
                     self.hideProgressView()
                     self.showAlert(title: "Service Issue", message: "Please try again!")
@@ -301,7 +365,7 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
                 }
                 DispatchQueue.main.async {
                     self.hideProgressView()
-//                    self.checkData(data: jsonData)
+                    self.checkData(data: jsonData)
                 }
             }
             catch{
@@ -313,7 +377,6 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
                 }
                 
             }
-            
         }
         
         task.resume()
@@ -323,6 +386,17 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
     func checkData(data: NSDictionary){
         if let error = data.value(forKey: "error") as? String{
             self.showAlert(title: "Error!", message: error)
+        }else{
+            let alertController = UIAlertController(title: "Success!", message: "\(caseForm.caseNo!) created successfully!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { action in
+                if let tabBar = self.tabBarController as? HomeTabBarViewController{
+                    tabBar.selectedIndex = 0
+                    tabBar.fetchAllData()
+                }
+            }))
+            self.present(alertController, animated: true, completion: nil)
+
+            self.showAlert(title: "Success!", message: "\(caseForm.caseNo!) created successfully!")
         }
     }
     
@@ -337,6 +411,20 @@ class AddNewCaseViewController: UIViewController, UITableViewDataSource, UITable
         UserDefaults.standard.removeObject(forKey: "EX-Token")
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func disableTextField(txtField: UITextField){
+        txtField.isUserInteractionEnabled = false
+        txtField.isEnabled = false
+    }
+    @IBAction func onTappingCancel(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
+    @IBOutlet weak var cancelBtn: UIButton!
+}
 
+class ActionTableViewCell: UITableViewCell
+{
+    @IBOutlet weak var actionButton: UIButton!
+    
 }
