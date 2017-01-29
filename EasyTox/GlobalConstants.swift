@@ -35,6 +35,8 @@ let caseListUrl = "http://\(hostname)/easytox/api/caseOrder"
 let pathologistsUrl = "http://\(hostname)/easytox/api/pathologists"
 let patientsUrl = "http://\(hostname)/easytox/api/patients"
 let physiciansUrl = "http://\(hostname)/easytox/api/physicians"
+let forgotPwdUrl = "http://bmtechsol.com:8080/easytox/actionItem/forgotPassword"
+
 let coredatahandler = CoreDatahandler()
 
 class Util:NSObject{

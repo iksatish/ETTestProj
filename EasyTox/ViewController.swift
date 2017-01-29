@@ -49,8 +49,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.userNameField.target(forAction: "valueChangedForTextField:", withSender: self)
         self.userNameField.delegate = self
         self.passwordField.delegate = self
+        let defaults = UserDefaults.standard
+        if let uid = defaults.value(forKey: "usr") as? String, let pwd = defaults.value(forKey: "pwd") as? String{
+            self.userNameField.text = uid
+            self.passwordField.text = pwd
+        }
     }
 
+    @IBAction func onClickingForgotPwd(_ sender: UIButton) {
+        UIApplication.shared.openURL(URL(string: forgotPwdUrl)!)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
